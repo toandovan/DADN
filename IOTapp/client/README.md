@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## AUTHENTICATION 
+Bắt đầu tại http://localhost:3000/S nhấn Signin là vào 
+Authentication tạm thời đã remove đi vì còn bug, fix xong add sau
+
 ## Available Scripts
 
 In the project directory, you can run:
