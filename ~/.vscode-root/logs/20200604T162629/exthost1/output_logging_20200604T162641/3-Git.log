@@ -1,0 +1,459 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/ansi/DADN
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/ansi/DADN/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:604919)
+	at T.updateTransientWatchers (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:83965)
+	at e.fire (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:87)
+	at e.updateModelState (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:103179)
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/ansi/DADN/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:604919)
+	at T.updateTransientWatchers (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:83965)
+	at e.fire (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:87)
+	at e.updateModelState (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:103179)
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :IOTapp/client/src/routes/routes.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/routes/routes.js
+> git cat-file -s 7a0ceab935935e5cf9e63975cf4e96e2881dfc0a
+> git show :IOTapp/client/src/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/index.js
+> git cat-file -s f5185c1ec7a5dccf30b55a8e3f89afc3eca764a1
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git show :IOTapp/client/src/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/index.js
+> git cat-file -s f5185c1ec7a5dccf30b55a8e3f89afc3eca764a1
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/client/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/package.json
+> git cat-file -s c3146137cefdbb7ff43428685df64a5b88167ec6
+> git show :IOTapp/client/.gitignore
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/.gitignore
+> git cat-file -s 4d29575de80483b005c29bfcac5061cd2f45313e
+> git check-ignore -v -z --stdin
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git show :IOTapp/client/src/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/index.js
+> git cat-file -s f5185c1ec7a5dccf30b55a8e3f89afc3eca764a1
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git show :IOTapp/client/src/routes/routes.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/routes/routes.js
+> git cat-file -s 7a0ceab935935e5cf9e63975cf4e96e2881dfc0a
+> git show :dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/dbConnect.js
+> git cat-file -s 3a9fa7eeab568ae81b1c34bf7776108a6da496ca
+> git show :IOTapp/client/src/components/Dashboard.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/components/Dashboard.js
+> git cat-file -s c20edb60c9797eb055d0d5f8582d4ada8d79c0eb
+> git show :dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/dbConnect.js
+> git cat-file -s 3a9fa7eeab568ae81b1c34bf7776108a6da496ca
+> git show :IOTapp/client/src/routes/routes.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/routes/routes.js
+> git cat-file -s 7a0ceab935935e5cf9e63975cf4e96e2881dfc0a
+> git show :IOTapp/client/src/serviceWorker.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/serviceWorker.js
+> git cat-file -s b04b771a82613a80b0532d7082508763620074bf
+> git show :IOTapp/client/src/index.css
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/index.css
+> git cat-file -s ec2585e8c0bb8188184ed1e0703c4c8f2a8419b0
+> git show :IOTapp/client/src/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/index.js
+> git cat-file -s f5185c1ec7a5dccf30b55a8e3f89afc3eca764a1
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git show :IOTapp/client/src/routes/routes.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/routes/routes.js
+> git cat-file -s 7a0ceab935935e5cf9e63975cf4e96e2881dfc0a
+> git show :IOTapp/client/src/components/Dashboard.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/components/Dashboard.js
+> git cat-file -s c20edb60c9797eb055d0d5f8582d4ada8d79c0eb
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :IOTapp/client/src/components/Dashboard.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/components/Dashboard.js
+> git cat-file -s c20edb60c9797eb055d0d5f8582d4ada8d79c0eb
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/client/src/components/Dashboard.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/components/Dashboard.js
+> git cat-file -s c20edb60c9797eb055d0d5f8582d4ada8d79c0eb
+> git show :IOTapp/client/src/routes/routes.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/routes/routes.js
+> git cat-file -s 7a0ceab935935e5cf9e63975cf4e96e2881dfc0a
+> git show :IOTapp/client/src/App.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/src/App.js
+> git cat-file -s e792d5ae2b44e0c2bb85d2b4774899edb1ede2e3
+> git show :IOTapp/client/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/client/package.json
+> git cat-file -s c3146137cefdbb7ff43428685df64a5b88167ec6
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/dbConnect.js
+> git cat-file -s 3a9fa7eeab568ae81b1c34bf7776108a6da496ca
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/package.json
+> git cat-file -s 6561aab82fbd90356334552b72905a8f14fa53f7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/package.json
+> git cat-file -s 6561aab82fbd90356334552b72905a8f14fa53f7
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/model.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/model.js
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/package.json
+> git cat-file -s 6561aab82fbd90356334552b72905a8f14fa53f7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/package.json
+> git cat-file -s 6561aab82fbd90356334552b72905a8f14fa53f7
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/users.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/users.js
+> git cat-file -s 623e4302bee32ccc080d1c83ee2e55a426c9bac8
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/ansi/DADN/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:604919)
+	at T.updateTransientWatchers (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:83965)
+	at e.fire (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:87)
+	at e.updateModelState (/snap/code/33/usr/share/code/resources/app/extensions/git/dist/main.js:1:103179)
+> git config --get commit.template
+> git show :IOTapp/backend/models/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/models/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/dbConnect.js
+> git show :IOTapp/backend/app.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/app.js
+> git cat-file -s 662bcc927286516b7bbcf9c9009630b78b533ca7
+> git show :IOTapp/backend/models/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/dbConnect.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/package.json
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/package.json
+> git cat-file -s 6561aab82fbd90356334552b72905a8f14fa53f7
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/config.env
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/config.env
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/publisher.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/publisher.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git check-ignore -v -z --stdin
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/routes/users.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/users.js
+> git cat-file -s 623e4302bee32ccc080d1c83ee2e55a426c9bac8
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
+> git show :IOTapp/backend/dbConnect.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/dbConnect.js
+> git show :IOTapp/backend/routes/index.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/index.js
+> git cat-file -s ecca96a56b309a315ddf6399155fd2f953031d3b
+> git show :IOTapp/backend/routes/subscriber.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+> git show :IOTapp/backend/models/sensorModel.js
+> git ls-files --stage -- /home/ansi/DADN/IOTapp/backend/models/sensorModel.js
