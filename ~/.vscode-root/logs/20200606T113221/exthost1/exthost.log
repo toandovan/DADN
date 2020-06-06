@@ -1,0 +1,151 @@
+[2020-06-06 11:32:24.246] [exthost] [info] extension host started
+[2020-06-06 11:32:24.290] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2020-06-06 11:32:24.290] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-06-06 11:32:24.323] [exthost] [info] ExtensionService#_doActivateExtension chrmarti.regex {"startup":false,"extensionId":{"value":"chrmarti.regex","_lower":"chrmarti.regex"},"activationEvent":"onLanguage:javascript"}
+[2020-06-06 11:32:24.323] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/chrmarti.regex-0.2.0/out/src/extension
+[2020-06-06 11:32:24.325] [exthost] [info] ExtensionService#_doActivateExtension eg2.tslint {"startup":false,"extensionId":{"value":"eg2.tslint","_lower":"eg2.tslint"},"activationEvent":"onLanguage:javascript"}
+[2020-06-06 11:32:24.325] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/eg2.tslint-1.0.44/out/extension
+[2020-06-06 11:32:24.369] [exthost] [info] ExtensionService#_doActivateExtension kisstkondoros.vscode-codemetrics {"startup":false,"extensionId":{"value":"kisstkondoros.vscode-codemetrics","_lower":"kisstkondoros.vscode-codemetrics"},"activationEvent":"onLanguage:javascript"}
+[2020-06-06 11:32:24.369] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/kisstkondoros.vscode-codemetrics-1.24.0/dist/extension
+[2020-06-06 11:32:24.395] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-06-06 11:32:24.395] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-06-06 11:32:24.397] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-06-06 11:32:24.397] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-06-06 11:32:24.408] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-06-06 11:32:24.408] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/git/dist/main
+[2020-06-06 11:32:24.423] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-06-06 11:32:24.423] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-06-06 11:32:24.428] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-06-06 11:32:24.428] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-06-06 11:32:24.431] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-06-06 11:32:24.431] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-06-06 11:32:24.433] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-06-06 11:32:24.433] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-06-06 11:32:24.445] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"extensionId":{"value":"christian-kohler.path-intellisense","_lower":"christian-kohler.path-intellisense"},"activationEvent":"*"}
+[2020-06-06 11:32:24.445] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/extension.js
+[2020-06-06 11:32:24.458] [exthost] [info] ExtensionService#_doActivateExtension donjayamanne.githistory {"startup":true,"extensionId":{"value":"donjayamanne.githistory","_lower":"donjayamanne.githistory"},"activationEvent":"*"}
+[2020-06-06 11:32:24.458] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/donjayamanne.githistory-0.6.5/dist/src/extension
+[2020-06-06 11:32:24.500] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-06-06 11:32:24.500] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/eamodio.gitlens-10.2.1/dist/extension
+[2020-06-06 11:32:24.519] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2020-06-06 11:32:24.519] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/editorconfig.editorconfig-0.15.1/out/editorConfigMain.js
+[2020-06-06 11:32:24.533] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"extensionId":{"value":"formulahendry.auto-close-tag","_lower":"formulahendry.auto-close-tag"},"activationEvent":"*"}
+[2020-06-06 11:32:24.533] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/formulahendry.auto-close-tag-0.5.7/out/src/extension
+[2020-06-06 11:32:24.534] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.gitignore {"startup":true,"extensionId":{"value":"michelemelluso.gitignore","_lower":"michelemelluso.gitignore"},"activationEvent":"*"}
+[2020-06-06 11:32:24.534] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/michelemelluso.gitignore-1.0.1/out/src/extension
+[2020-06-06 11:32:24.535] [exthost] [info] ExtensionService#_doActivateExtension shardulm94.trailing-spaces {"startup":true,"extensionId":{"value":"shardulm94.trailing-spaces","_lower":"shardulm94.trailing-spaces"},"activationEvent":"*"}
+[2020-06-06 11:32:24.535] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/shardulm94.trailing-spaces-0.3.1/out/src/extension
+[2020-06-06 11:32:24.550] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2020-06-06 11:32:24.550] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/streetsidesoftware.code-spell-checker-1.9.0/dist/extension
+[2020-06-06 11:32:24.563] [exthost] [error] Activating extension christian-kohler.path-intellisense failed due to an error:
+[2020-06-06 11:32:24.566] [exthost] [error] Error: Cannot find module 'json5'
+Require stack:
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/configuration/tsconfig.service.js
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/configuration/configuration.service.js
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/javascript/javascript.provider.js
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/default.provider.js
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/index.js
+- /home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/extension.js
+- /snap/code/33/usr/share/code/resources/app/out/vs/loader.js
+- /snap/code/33/usr/share/code/resources/app/out/bootstrap-amd.js
+- /snap/code/33/usr/share/code/resources/app/out/bootstrap-fork.js
+	at Function.Module._resolveFilename (internal/modules/cjs/loader.js:717:15)
+	at Module._load (internal/modules/cjs/loader.js:622:27)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/configuration/tsconfig.service.js:13:15)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/configuration/configuration.service.js:13:28)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/javascript/javascript.provider.js:13:33)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/default.provider.js:3:31)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/providers/index.js:3:28)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at n (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:524)
+	at Object.<anonymous> (/home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.0/out/extension.js:6:21)
+	at Module.o._compile (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:15:749)
+	at Object.Module._extensions..js (internal/modules/cjs/loader.js:892:10)
+	at Module.load (internal/modules/cjs/loader.js:735:32)
+	at Module._load (internal/modules/cjs/loader.js:648:12)
+	at Module._load (electron/js2c/asar.js:717:26)
+	at Function.Module._load (electron/js2c/asar.js:717:26)
+	at Function.t._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:955:769)
+	at Function.n._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:925:106)
+	at Function.i._load (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:921:391)
+	at Module.require (internal/modules/cjs/loader.js:775:19)
+	at require (internal/modules/cjs/helpers.js:68:18)
+	at Function.s [as __$__nodeRequire] (/snap/code/33/usr/share/code/resources/app/out/vs/loader.js:33:115)
+	at h._loadCommonJSModule (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:926:266)
+	at h._doActivateExtension (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:822:856)
+	at h._activateExtension (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:821:937)
+	at Object.actualActivateExtension (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:819:883)
+	at e._activateExtension (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:598:859)
+	at /snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:598:537
+	at Array.map (<anonymous>)
+	at e._activateExtensions (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:598:525)
+	at e.activateByEvent (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:596:14)
+	at h._activateByEvent (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:820:618)
+	at h._handleEagerExtensions (/snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:824:542)
+	at /snap/code/33/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:828:123
+	at processTicksAndRejections (internal/process/task_queues.js:85:5)
+[2020-06-06 11:32:24.843] [exthost] [info] eager extensions activated
+[2020-06-06 11:32:30.084] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2020-06-06 11:32:30.084] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2020-06-06 11:32:30.091] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2020-06-06 11:32:30.091] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/33/usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain

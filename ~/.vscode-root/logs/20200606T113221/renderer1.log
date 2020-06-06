@@ -1,0 +1,7 @@
+[2020-06-06 11:32:23.322] [renderer1] [error] Error: Unable to read file '/home/ansi/DADN/IOTapp/backend/models/sensorModel.js' (Error: Unable to resolve non-existing file '/home/ansi/DADN/IOTapp/backend/models/sensorModel.js')
+    at Object.t.createErrorWithActions (file:///snap/code/33/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:53:257)
+    at e.handleSetInputError (file:///snap/code/33/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5512:744)
+    at e.handleSetInputError (file:///snap/code/33/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5515:590)
+    at e.setInput (file:///snap/code/33/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5512:460)
+[2020-06-06 11:36:27.265] [renderer1] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?),(?,?)). Details: Keys: workbench.explorer.views.state, workbench.panel.terminal Length: 870
+[2020-06-06 11:37:06.608] [renderer1] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?),(?,?),(?,?)). Details: Keys: lifecyle.lastShutdownReason, memento/workbench.parts.editor, codelens/cache2 Length: 3249

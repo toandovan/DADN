@@ -22,9 +22,6 @@ client.on('connect',function(){
 client.on('message',function(topic,message){
     //message
     var obj=JSON.parse(message);
-    console.log(obj.device_id)
-
-    // let device_id=message.
-    // //write msg to database
-    humidity.model(obj.device_id,obj.status,obj.sensor_value);
+    console.log(obj.value)
+    humidity.model(obj.device_id,'on',obj.value);
 })

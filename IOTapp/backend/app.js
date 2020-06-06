@@ -3,7 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose=require('mongoose')
 
+var cb = function(err){
+  if(!err)
+      console.log("Connection Opened");
+  else
+      console.log("Connection Opened Failed");
+};
+mongoose.connect("mongodb+srv://toando:toando@cluster0-xfeu0.azure.mongodb.net/iotserver?retryWrites=true&w=majority",cb);
+con = mongoose.connection;
+
+var dashBoardRouter=require('./routes/Dashboard')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -21,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/Dashboard', dashBoardRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

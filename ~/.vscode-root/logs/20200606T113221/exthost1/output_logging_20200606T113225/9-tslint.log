@@ -1,0 +1,26 @@
+[Info  - 11:32:25 AM] Linter is running.
+[Warn  - 11:32:25 AM] 
+Failed to load the TSLint library for the document /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+
+To use TSLint in this workspace please install tslint using 'npm install tslint' or globally using 'npm install -g tslint'.
+TSLint has a peer dependency on `typescript`, make sure that `typescript` is installed as well.
+You need to reopen the workspace after installing tslint.
+[Warn  - 11:32:26 AM] 
+Failed to load the TSLint library for the document /home/ansi/DADN/IOTapp/backend/models/sensor.js
+
+To use TSLint in this workspace please install tslint using 'npm install tslint' or globally using 'npm install -g tslint'.
+TSLint has a peer dependency on `typescript`, make sure that `typescript` is installed as well.
+You need to reopen the workspace after installing tslint.
+[Warn  - 11:32:28 AM] 
+Failed to load the TSLint library for the document /home/ansi/DADN/IOTapp/backend/routes/Dashboard.js
+
+To use TSLint in this workspace please install tslint using 'npm install tslint' or globally using 'npm install -g tslint'.
+TSLint has a peer dependency on `typescript`, make sure that `typescript` is installed as well.
+You need to reopen the workspace after installing tslint.
+[Warn  - 11:36:06 AM] 
+Failed to load the TSLint library for the document /home/ansi/DADN/IOTapp/backend/routes/subscriber.js
+
+To use TSLint in this workspace please install tslint using 'npm install tslint' or globally using 'npm install -g tslint'.
+TSLint has a peer dependency on `typescript`, make sure that `typescript` is installed as well.
+You need to reopen the workspace after installing tslint.
+[Info  - 11:37:06 AM] Linter has stopped.

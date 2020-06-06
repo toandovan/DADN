@@ -7,22 +7,29 @@ import Title from './Title';
 function createData(time, amount) {
   return { time, amount };
 }
-
-const data = [
-  createData('00:00', 0),
-  createData('03:00', 300),
-  createData('06:00', 600),
-  createData('09:00', 800),
-  createData('12:00', 1500),
-  createData('15:00', 2000),
-  createData('18:00', 2400),
-  createData('21:00', 2400),
-  createData('24:00', undefined),
-];
-
+var data=[]
+const request = async () => {
+  const response = await fetch('/Dashboard');
+  const json = await response.json();
+  const x=JSON.parse(JSON.stringify(json))
+  // console.log(x.sensorData[0].device_id)
+  console.log(x)
+  x.sensorData.map(res=>data.push(createData(res.sensor_record.date,res.sensor_record.sensor_value[1])))
+}
+request()
+// const data = [
+//   createData('00:00', 0),
+//   createData('03:00', 300),
+//   createData('06:00', 600),
+//   createData('09:00', 800),
+//   createData('12:00', 1500),
+//   createData('15:00', 2000),
+//   createData('18:00', 2400),
+//   createData('21:00', 2400),
+//   createData('24:00', undefined),
+// ];
 export default function Chart() {
   const theme = useTheme();
-
   return (
     <React.Fragment>
       <Title>Today</Title>

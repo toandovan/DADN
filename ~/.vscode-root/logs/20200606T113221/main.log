@@ -1,0 +1,4 @@
+[2020-06-06 11:32:21.997] [main] [info] update#setState idle
+[2020-06-06 11:32:52.006] [main] [info] update#setState checking for updates
+[2020-06-06 11:32:52.007] [main] [info] update#setState idle
+[2020-06-06 11:37:06.703] [main] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?),(?,?),(?,?)). Details: Keys: editorFontInfo, workbench.grid.width, workbench.grid.height Length: 949
