@@ -14,17 +14,31 @@ const useStyles = makeStyles({
     flex: 1,
   },
 });
-
+var date=(new Date()).toString()
+var estimation=0
+const request = async () => {
+  const response = await fetch('/Dashboard');
+  const json = await response.json();
+  const x=JSON.parse(JSON.stringify(json))
+  x.sensorData.map(res=>estimation+=parseFloat(res.sensor_value[0]))
+  estimation=estimation/x.sensorData.length
+}
+request()
+//
 export default function Estimation() {
   const classes = useStyles();
   return (
     <React.Fragment>
       <Title>Average of Humidity</Title>
       <Typography component="p" variant="h4">
-        55%
+        {
+           estimation
+        }
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on 02 June, 2020
+        {
+            date
+        }
       </Typography>
       <div>
         {/* <Link color="primary" href="#" onClick={preventDefault}> */}

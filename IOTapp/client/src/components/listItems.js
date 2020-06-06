@@ -5,6 +5,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 // eslint-disable-next-line
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import AllInclusive from '@material-ui/icons/AllInclusive';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
@@ -22,13 +23,13 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <AllInclusive />
       </ListItemIcon>
-      <ListItemText primary="User Info" />
+      <ListItemText primary="Sensor" />
     </ListItem>
+    
 
     <ListItem button>
       <ListItemIcon>
@@ -42,6 +43,12 @@ export const mainListItems = (
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Humidity" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <ListItemText primary="User Info" />
     </ListItem>
   </div>
 );
