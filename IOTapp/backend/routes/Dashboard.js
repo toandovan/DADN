@@ -7,14 +7,14 @@ router.get('/', function(req, res, next) {
   //res status
   // const sensor;
   console.log(Date.now())
-  var x=Date.now()
-  console.log(x)
-  console.log(typeof(x))
-  var y=x-3600*100*24
-  console.log(y)
-  console.log(typeof(y))
+  // var x=Date.now()
+  // console.log(x)
+  // console.log(typeof(x))
+  // var y=x-3600*100*24*2
+  // console.log(y)
+  // console.log(typeof(y))
   sensor.find()
-  .where('date').gt(y).lt(x)
+  // .where('date').gt(y).lt(x)
   .exec().then((doc)=>{
     console.log(doc)
     res.status(200).json({

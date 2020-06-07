@@ -3,6 +3,5 @@
         "node_modules{,/**}",
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/cbb25e1b-5453-43e3-b9a4-764d8f98fa5b/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/doandanganh",
     "appService.deploySubpath": "."
 }

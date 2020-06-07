@@ -29,8 +29,6 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Sensor" />
     </ListItem>
-    
-
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
