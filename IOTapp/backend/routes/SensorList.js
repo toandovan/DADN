@@ -3,14 +3,16 @@ const sensor= require('./../models/sensor')
 const mongoose=require('mongoose')
 var router = express.Router();
 /* GET home page. */
-router.get('/date/:date/', function(req, res, next) {
+router.get('/', function(req, res, next) {
   console.log(req.params)
   sensor.find()
   // .where('date').gt(y).lt(x)
   .exec().then((doc)=>{
+    var x=[]
+    doc.map(r=>x.push(r.device_id))
     res.status(200).json({
       // message: 'handling get request',
-      sensorData: doc
+      sensorData: x
     })
   })
   .catch(err=>{

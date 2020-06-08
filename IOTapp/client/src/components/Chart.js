@@ -9,10 +9,13 @@ function createData(time, amount) {
 }
 var data=[]
 const request = async () => {
-  const response = await fetch('/Dashboard');
+  const response = await fetch('/Dashboard/date/'+Date.now());
   const json = await response.json();
   const x=JSON.parse(JSON.stringify(json))
-  // console.log(x.sensorData[0].device_id)
+  if (x==""){
+    return
+  }
+  console.log(x)
   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[1])))
 }
 request()

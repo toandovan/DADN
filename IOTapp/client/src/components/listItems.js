@@ -13,44 +13,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import AuthApi from ".././utils/AuthApi"
-
-
-export const mainListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AllInclusive />
-      </ListItemIcon>
-      <ListItemText primary="Sensor" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Temperature" />
-    </ListItem>
-
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Humidity" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="User Info" />
-    </ListItem>
-  </div>
-);
-
+import { Router, Link } from 'react-router-dom';
 //can use later
 // export const secondaryListItems = (
 //   <div>
@@ -65,6 +28,61 @@ export const mainListItems = (
 //   </div>
 // );
 
+export function UserInfoButton(){
+  const authApi = React.useContext(AuthApi)
+  const UserInfoHandle = ()=>{
+    // authApi.setAuth(false)
+  }
+  return (
+    <ListItem button onClick = {UserInfoHandle}>
+      <ListItemIcon>
+        <BarChartIcon />
+      </ListItemIcon>
+      <ListItemText primary="User Information" />
+    </ListItem>
+  )
+}
+export function HumidityButton(){
+  const authApi = React.useContext(AuthApi)
+  const HumidityHandle = ()=>{
+    // authApi.setAuth(false)
+  }
+  return (
+
+    <ListItem button onClick = {HumidityHandle}>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="Humidity" />
+    </ListItem>
+  )
+}
+export function TemperatureButton(){
+  const authApi = React.useContext(AuthApi)
+  const TemperatureHandle = ()=>{
+    // authApi.setAuth(false)
+  }
+  return (
+
+    <ListItem button onClick = {TemperatureHandle}>
+      <ListItemIcon>
+        <BarChartIcon />
+      </ListItemIcon>
+      <ListItemText primary="Temperature" />
+    </ListItem>
+  )
+}
+export function DashBoardButton(){
+  const authApi = React.useContext(AuthApi)
+  return (
+    <ListItem button component={Link} to="/Dash">
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Dash Board" />
+    </ListItem>
+  )
+}
 export function LogOutButton(){
   const authApi = React.useContext(AuthApi)
   const logOutHandle = ()=>{
@@ -78,5 +96,17 @@ export function LogOutButton(){
       </ListItemIcon>
       <ListItemText primary="Log Out" />
     </ListItem>
+  )
+}
+
+export function SensorButton(){
+  const authApi = React.useContext(AuthApi)
+  return (
+    <ListItem button component={Link} to="/Sensor">
+    <ListItemIcon>
+      <AllInclusive />
+    </ListItemIcon>
+    <ListItemText primary="Sensor" />
+  </ListItem>
   )
 } 

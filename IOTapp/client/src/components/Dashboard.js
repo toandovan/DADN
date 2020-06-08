@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 // import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, LogOutButton } from './listItems';
+import { UserInfoButton,HumidityButton,DashBoardButton, LogOutButton,SensorButton, TemperatureButton } from './listItems';
 import Chart from './Chart';
 import Estimation from './Estimation';
 import TableInfo from './TableInfo';
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+export default function Dashboard(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -163,10 +163,11 @@ export default function Dashboard() {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <List>{mainListItems}</List>
-        <Divider />
-        <LogOutButton />
+        <DashBoardButton/>
+        <HumidityButton/>
+        <TemperatureButton/>
+        <SensorButton />
+        <LogOutButton/>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

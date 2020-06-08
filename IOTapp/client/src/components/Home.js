@@ -20,12 +20,12 @@ const request = async () => {
   const response = await fetch('/Dashboard/date/'+Date.now());
   const json = await response.json();
   const x=JSON.parse(JSON.stringify(json))
-  x.sensorData.map(res=>estimation+=parseFloat(res.sensor_value[0]))
+  x.sensorData.map(res=>estimation+=parseFloat(res.sensor_value[1]))
   estimation=estimation/x.sensorData.length
 }
 request()
 //
-export default function Estimation() {
+export default function Home() {
   const classes = useStyles();
   return (
     <React.Fragment>
