@@ -8,6 +8,7 @@ var cb = function(err){
     if(!err)
         console.log("Connection Opened");
     else
+        // console.log(err)
         console.log("Connection Opened Failed");
 };
 client.on('connect',function(){
@@ -16,15 +17,31 @@ client.on('connect',function(){
         if(err){
             console.log(err)
         }
-        mongoose.connect("mongodb+srv://toando:toando@cluster0-xfeu0.azure.mongodb.net/iotserver?retryWrites=true&w=majority",cb);
+        // mongoose.connect("mongodb+srv://toando:toando@cluster0-xfeu0.azure.mongodb.net/iotserver?retryWrites=true&w=majority",cb);
+        mongoose.connect("mongodb+srv://tronganhn2:xsGLAKbZo3KbI9I0@cluster0-qswj1.gcp.mongodb.net/data-test1?retryWrites=true&w=majority",cb);
+
+        
         con = mongoose.connection;
 })})
 client.on('message',function(topic,message){
     //message
     var obj=JSON.parse(message);
-    console.log(obj.device_id)
+    console.log(obj.value)
 
     // let device_id=message.
     // //write msg to database
-    humidity.model(obj.device_id,obj.status,obj.sensor_value);
+    humidity.model(obj.device_id,obj.status,obj.value);
 })
+
+
+
+
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://tronganhn2:TheMoon1.@cluster0-qswj1.gcp.mongodb.net/data-test1?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });

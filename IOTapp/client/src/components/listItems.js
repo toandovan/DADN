@@ -11,6 +11,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 // eslint-disable-next-line
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import { Link } from 'react-router-dom'
 import AuthApi from ".././utils/AuthApi"
 
 
@@ -42,6 +43,13 @@ export const mainListItems = (
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Humidity" />
+    </ListItem>
+
+    <ListItem button component={Link} to="/new/location/">
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="Humidity2" />
     </ListItem>
   </div>
 );

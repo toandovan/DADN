@@ -6,7 +6,7 @@ const sensorSchema=new mongoose.Schema({
     sensor_record: {
        date: Date,
        status: String,
-       sensor_value: Number
+       sensor_value: String
     }
 })
 var sensorModel=mongoose.model('humidity',sensorSchema);
