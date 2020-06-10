@@ -49,14 +49,7 @@ const RouteSignIn = ({component: Component, ...rest}) =>{
       <Route {...rest} render={props=> (authapi.auth == false) ? <Component {...props} /> : <Redirect to="/Dash"/>} />
   )
 }
-const RouteDeviceList = ({component: Component, ...rest}) =>{
-  const authapi = React.useContext(AuthApi)
-  // console.log({...rest})
-  return (
-      // eslint-disable-next-line
-      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/DeviceList"/>} />
-  )
-}
+
 
 
 const RouteDashBoard = ({component: Component, path: Path, ...rest}) =>{
@@ -74,7 +67,16 @@ const RouteSensorList = ({component: Component, ...rest}) =>{
   // console.log({...rest})
   return (
       // eslint-disable-next-line
-      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/SensorList"/>} />
+      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/"/>} />
+  )
+}
+
+const RouteDeviceList = ({component: Component, ...rest}) =>{
+  const authapi = React.useContext(AuthApi)
+  // console.log({...rest})
+  return (
+      // eslint-disable-next-line
+      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/"/>} />
   )
 }
 export default App;
