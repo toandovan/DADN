@@ -6,6 +6,7 @@ import SignIn from './components/SignIn';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import SensorList from './components/SensorList';
+import DeviceList from './components/DeviceList';
 import AuthApi from "./utils/AuthApi"
 // const useStateWithLocalStorage = localStorageKey => {
 //   const [value, setValue] = useState(
@@ -28,10 +29,11 @@ function App() {
     <div className="App">
     <AuthApi.Provider value = {{auth, setAuth}}>
       <Router>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" component={SignIn}/>
               <RouteSignIn exact path="/SignIn" component = {SignIn} />
               <RouteDashBoard exact path="/Dash" component = {Dashboard} />
-              <RouteSensorList exact path="/Sensor" component={SensorList}/>
+              <RouteDeviceList exact path="/DeviceList" component = {DeviceList} />
+              <RouteSensorList exact path="/SensorList" component={SensorList}/>
 
       </Router>
     </AuthApi.Provider>
@@ -45,6 +47,14 @@ const RouteSignIn = ({component: Component, ...rest}) =>{
   return (
       // eslint-disable-next-line
       <Route {...rest} render={props=> (authapi.auth == false) ? <Component {...props} /> : <Redirect to="/Dash"/>} />
+  )
+}
+const RouteDeviceList = ({component: Component, ...rest}) =>{
+  const authapi = React.useContext(AuthApi)
+  // console.log({...rest})
+  return (
+      // eslint-disable-next-line
+      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/DeviceList"/>} />
   )
 }
 
@@ -64,7 +74,7 @@ const RouteSensorList = ({component: Component, ...rest}) =>{
   // console.log({...rest})
   return (
       // eslint-disable-next-line
-      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/Sensor"/>} />
+      <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/SensorList"/>} />
   )
 }
 export default App;

@@ -21,7 +21,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { UserInfoButton,HumidityButton,DashBoardButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
 import Chart from './Chart';
 import Estimation from './Estimation';
-import TableInfo from './SensorTable';
+import TableInfo from './DeviceTable';
+import { Button } from '@material-ui/core';
 
 // function Copyright() {
 //   return (
@@ -117,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SensorList(props) {
+export default function DeviceList(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -142,7 +143,7 @@ export default function SensorList(props) {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Sensor Control
+            Motor Control
           </Typography>
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -172,9 +173,10 @@ export default function SensorList(props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
+        {/* adjust allow */}
+        <div><Button variant="outline-primary" >ADD Motor</Button></div>
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-      
             {/* Recent TableInfo */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>

@@ -102,11 +102,24 @@ export function LogOutButton(){
 export function SensorButton(){
   const authApi = React.useContext(AuthApi)
   return (
-    <ListItem button component={Link} to="/Sensor">
+    <ListItem button component={Link} to="/SensorList">
     <ListItemIcon>
       <AllInclusive />
     </ListItemIcon>
     <ListItemText primary="Sensor" />
+  </ListItem>
+  )
+}
+
+//motor
+export function MotorButton(){
+  const authApi = React.useContext(AuthApi)
+  return (
+    <ListItem button component={Link} to="/DeviceList">
+    <ListItemIcon>
+      <AllInclusive />
+    </ListItemIcon>
+    <ListItemText primary="Motor" />
   </ListItem>
   )
 } 

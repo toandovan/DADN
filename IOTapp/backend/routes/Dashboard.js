@@ -1,5 +1,5 @@
 var express = require('express');
-const sensor= require('./../models/sensor')
+const sensor= require('../models/humidities')
 const mongoose=require('mongoose')
 var router = express.Router();
 /* GET home page. */
@@ -8,6 +8,7 @@ router.get('/date/:date/', function(req, res, next) {
   sensor.find()
   // .where('date').gt(y).lt(x)
   .exec().then((doc)=>{
+    console.log(doc)
     res.status(200).json({
       // message: 'handling get request',
       sensorData: doc

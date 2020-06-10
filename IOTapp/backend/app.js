@@ -17,7 +17,7 @@ con = mongoose.connection;
 var dashBoardRouter=require('./routes/Dashboard')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var sensorRouter = require('./routes/SensorList');
+var deviceRouter = require('./routes/deviceList');
 
 var app = express();
 
@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/Dashboard', dashBoardRouter);
-app.use('/Sensor', sensorRouter);
+app.use('/device', deviceRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
