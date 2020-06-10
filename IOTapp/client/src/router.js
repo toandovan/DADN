@@ -29,8 +29,8 @@ function App() {
     <div className="App">
     <AuthApi.Provider value = {{auth, setAuth}}>
       <Router>
-              <Route exact path="/" component={SignIn}/>
-              <RouteSignIn exact path="/SignIn" component = {SignIn} />
+              {/* <Route exact path="/" component={SignIn}/> */}
+              <RouteSignIn exact path="/" component = {SignIn} />
               <RouteDashBoard exact path="/Dash" component = {Dashboard} />
               <RouteDeviceList exact path="/DeviceList" component = {DeviceList} />
               <RouteSensorList exact path="/SensorList" component={SensorList}/>
