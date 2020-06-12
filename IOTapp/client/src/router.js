@@ -57,7 +57,7 @@ const RouteDashBoard = ({component: Component, path: Path, ...rest}) =>{
   return (
       <Route path = {Path} render={props=> 
           // eslint-disable-next-line
-          (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/SignIn"/>
+          (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/"/>
           } />
       // || Path === "/Dash"
   )

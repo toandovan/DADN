@@ -7,7 +7,7 @@ const sensorSchema=new mongoose.Schema({
     status: String,
     sensor_value: [String]
 })
-var sensorModel=mongoose.model('humidity',sensorSchema);
+var sensorModel=mongoose.model('humidities',sensorSchema);
 // module.exports.sensorModel=sensorModel;
 
 let model= (device_id,status,sensor_value)=>{

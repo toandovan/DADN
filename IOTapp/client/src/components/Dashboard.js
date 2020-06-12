@@ -165,7 +165,7 @@ export default function Dashboard(props) {
         </div>
         <DashBoardButton/>
         <HumidityButton/>
-        <TemperatureButton/>
+        {/* <TemperatureButton/> */}
         <SensorButton />
         <MotorButton />
         <LogOutButton/>

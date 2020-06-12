@@ -14,7 +14,7 @@ const request = async () => {
   if (x==""){
     return
   }
-  console.log(x)
+  // console.log(x)
   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[1])))
 }
 request()

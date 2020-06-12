@@ -8,10 +8,12 @@ var mongoose=require('mongoose')
 var cb = function(err){
   if(!err)
       console.log("Connection Opened");
-  else
+  else{
       console.log("Connection Opened Failed");
+      console.log(err)
+  }
 };
-mongoose.connect("mongodb+srv://toando:toando@cluster0-xfeu0.azure.mongodb.net/iotserver?retryWrites=true&w=majority",cb);
+mongoose.connect("mongodb+srv://tronganhn2:aa@cluster0-qswj1.gcp.mongodb.net/data-test1?retryWrites=true&w=majority",cb);
 con = mongoose.connection;
 
 var dashBoardRouter=require('./routes/Dashboard')
@@ -35,6 +37,15 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/Dashboard', dashBoardRouter);
 app.use('/device', deviceRouter);
+
+
+app.get('/api/home', function(req, res) {
+  res.send('Welcome!');
+});
+app.get('/api/secret', function(req, res) {
+  res.send('The password is potato');
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
