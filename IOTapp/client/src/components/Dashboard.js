@@ -18,10 +18,12 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 // import NotificationsIcon from '@material-ui/icons/Notifications';
-import { UserInfoButton,HumidityButton,DashBoardButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
+import { UserInfoButton,DashboardButton,MoisButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
 import Chart from './Chart';
 import Estimation from './Estimation';
 import TableInfo from './TableInfo';
+import LandingPageHeader from './HeaderPage';
+
 
 // function Copyright() {
 //   return (
@@ -124,33 +126,13 @@ export default function Dashboard(props) {
     setOpen(true);
   };
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen(!open);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-        <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
-          </Typography>
-          {/* <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton> */}
-        </Toolbar>
-      </AppBar>
+      
       <Drawer
         variant="permanent"
         classes={{
@@ -163,41 +145,18 @@ export default function Dashboard(props) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <DashBoardButton/>
-        <HumidityButton/>
+        <DashboardButton/>
+        <MoisButton/>
         {/* <TemperatureButton/> */}
         <SensorButton />
         <MotorButton />
         <LogOutButton/>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-            {/* Recent Estimation */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Estimation />
-              </Paper>
-            </Grid>
-            {/* Recent TableInfo */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <TableInfo />
-              </Paper>
-            </Grid>
-          </Grid>
-          {/* <Box pt={4}>
-            <Copyright />
-          </Box> */}
-        </Container>
+        
+        <LandingPageHeader />
       </main>
     </div>
+    
   );
 }

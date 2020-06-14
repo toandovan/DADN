@@ -42,18 +42,18 @@ export function UserInfoButton(){
     </ListItem>
   )
 }
-export function HumidityButton(){
+export function DashboardButton(){
   const authApi = React.useContext(AuthApi)
   const HumidityHandle = ()=>{
     // authApi.setAuth(false)
   }
   return (
-
-    <ListItem button onClick = {HumidityHandle}>
+    
+    <ListItem button component={Link} to="/Dashboard">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Humidity" />
+      <ListItemText primary="Dashboard" />
     </ListItem>
   )
 }
@@ -72,14 +72,14 @@ export function TemperatureButton(){
     </ListItem>
   )
 }
-export function DashBoardButton(){
+export function MoisButton(){
   const authApi = React.useContext(AuthApi)
   return (
-    <ListItem button component={Link} to="/Dash">
+    <ListItem button component={Link} to="/Mois">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dash Board" />
+      <ListItemText primary="Humidity" />
     </ListItem>
   )
 }

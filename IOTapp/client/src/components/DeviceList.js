@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 // import NotificationsIcon from '@material-ui/icons/Notifications';
-import { UserInfoButton,HumidityButton,DashBoardButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
+import { UserInfoButton,DashboardButton,MoisButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
 import Chart from './Chart';
 import Estimation from './Estimation';
 import TableInfo from './DeviceTable';
@@ -164,9 +164,9 @@ export default function DeviceList(props) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <DashBoardButton/>
-        <HumidityButton/>
-        <TemperatureButton/>
+        <DashboardButton/>
+        <MoisButton/>
+        {/* <TemperatureButton/> */}
         <SensorButton />
         <MotorButton/>
         <LogOutButton/>
@@ -174,7 +174,7 @@ export default function DeviceList(props) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         {/* adjust allow */}
-        <div><Button variant="outline-primary" >ADD Motor</Button></div>
+        {/* <div><Button variant="outline-primary" >ADD Motor</Button></div> */}
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Recent TableInfo */}

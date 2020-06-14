@@ -1,0 +1,41 @@
+/* body {
+    background: #222;
+  }
+  
+  #root {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  } */
+  
+  .toggleContainer {
+    width: 45px;
+    height: 25px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background: rgb(71, 196, 55);
+    padding: 0 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+  
+  .toggleKnob {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    display: block;
+    border-radius: 50%;
+    line-height: 35px;
+    transition: all 0.1s ease-in;
+  }
+  
+  .toggleKnob.isActive {
+    transform: translateX(20px);
+  }
+  
+  .toggleContainer.isActive {
+    background: rgb(255, 70, 70);
+  }

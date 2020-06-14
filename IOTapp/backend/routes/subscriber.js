@@ -14,7 +14,7 @@ var cb = function(err){
     if(!err)
         console.log("Connection Opened");
     else
-        console.log("Connection Opened Failed");
+        console.log("Connection Opened Failed"); 
 };
 client.on('connect',function(){
     client.subscribe('Topic/Mois',function(err){
@@ -29,5 +29,5 @@ client.on('message',function(topic,message){
     //message
     var obj=JSON.parse(message);
     console.log(obj)
-    humidity.model(obj.device_id,'on',obj.values);
+    // humidity.model(obj.device_id,'on',obj.values);
 })

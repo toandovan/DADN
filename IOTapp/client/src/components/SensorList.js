@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 // import NotificationsIcon from '@material-ui/icons/Notifications';
-import { UserInfoButton,HumidityButton,DashBoardButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
+import { UserInfoButton,DashboardButton,MoisButton, LogOutButton,SensorButton, TemperatureButton,MotorButton } from './listItems';
 import Chart from './Chart';
 import Estimation from './Estimation';
 import TableInfo from './SensorTable';
@@ -163,9 +163,9 @@ export default function SensorList(props) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <DashBoardButton/>
-        <HumidityButton/>
-        <TemperatureButton/>
+        <DashboardButton/>
+        <MoisButton/>
+        {/* <TemperatureButton/> */}
         <SensorButton />
         <MotorButton/>
         <LogOutButton/>

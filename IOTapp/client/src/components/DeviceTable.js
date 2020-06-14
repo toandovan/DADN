@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
+import ToggleButton from './Button1'
 
 // Generate Order Data
 function createData(id,device_id, sensor_type, value, status) {
@@ -21,6 +22,7 @@ const humidityData = [
   createData(2, '', '', '', ''),
   createData(3, '', '', '', ''),
   createData(4  , '', '', '', ''),
+  createData(5  , '', '', '', ''),
 ];
 const temperatureData = [
   createData(0, 'bb', 'bb', 'bb', 'bb'),
@@ -28,6 +30,7 @@ const temperatureData = [
   createData(2, '', '', '', ''),
   createData(3, '', '', '', ''),
   createData(4  , '', '', '', ''),
+  createData(5  , '', '', '', ''),
 ];
 
 function preventDefault(event) {
@@ -52,7 +55,8 @@ export default function TableInfo() {
             <TableCell>Device id</TableCell>
             <TableCell>Type </TableCell>
             <TableCell>Value </TableCell>
-            <TableCell align="right">Status</TableCell>
+            <TableCell >Status</TableCell>
+            <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -62,7 +66,10 @@ export default function TableInfo() {
               <TableCell>{row.device_id}</TableCell>
               <TableCell>{row.sensor_type}</TableCell>
               <TableCell>{row.value}</TableCell>
-              <TableCell align="right">{row.status}</TableCell>
+              <TableCell >{row.status}</TableCell>
+              <TableCell align="center" >
+                <ToggleButton />
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

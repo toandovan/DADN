@@ -8,6 +8,8 @@ import Dashboard from './components/Dashboard';
 import SensorList from './components/SensorList';
 import DeviceList from './components/DeviceList';
 import AuthApi from "./utils/AuthApi"
+import LandingPage from './components/HeaderPage';
+import MoisPage from './components/Humidity' 
 // const useStateWithLocalStorage = localStorageKey => {
 //   const [value, setValue] = useState(
 //     !localStorage.getItem(localStorageKey) ? false :  localStorage.getItem(localStorageKey)
@@ -31,9 +33,10 @@ function App() {
       <Router>
               {/* <Route exact path="/" component={SignIn}/> */}
               <RouteSignIn exact path="/" component = {SignIn} />
-              <RouteDashBoard exact path="/Dash" component = {Dashboard} />
+              <RouteDashBoard exact path="/Mois" component = {MoisPage} />
               <RouteDeviceList exact path="/DeviceList" component = {DeviceList} />
               <RouteSensorList exact path="/SensorList" component={SensorList}/>
+              <RouteDashBoard exact path="/Dashboard" component={Dashboard} />
 
       </Router>
     </AuthApi.Provider>
@@ -46,7 +49,7 @@ const RouteSignIn = ({component: Component, ...rest}) =>{
   // console.log({...rest})
   return (
       // eslint-disable-next-line
-      <Route {...rest} render={props=> (authapi.auth == false) ? <Component {...props} /> : <Redirect to="/Dash"/>} />
+      <Route {...rest} render={props=> (authapi.auth == false) ? <Component {...props} /> : <Redirect to="/Dashboard"/>} />
   )
 }
 
@@ -70,6 +73,15 @@ const RouteSensorList = ({component: Component, ...rest}) =>{
       <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/"/>} />
   )
 }
+
+// const DashBoard = ({component: Component, ...rest}) =>{
+//   const authapi = React.useContext(AuthApi)
+//   // console.log({...rest})
+//   return (
+//       // eslint-disable-next-line
+//       <Route {...rest} render={props=> (authapi.auth == true) ? <Component {...props} /> : <Redirect to="/"/>} />
+//   )
+// }
 
 const RouteDeviceList = ({component: Component, ...rest}) =>{
   const authapi = React.useContext(AuthApi)
