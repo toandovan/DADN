@@ -22,7 +22,8 @@ import { UserInfoButton,DashboardButton,MoisButton, LogOutButton,SensorButton, T
 import Chart from './Chart';
 import Estimation from './Estimation';
 import TableInfo from './TableInfo';
-import LandingPageHeader from './HeaderPage';
+// import LandingPageHeader from './HeaderPage';
+import DashBoardPage from './DashBoardPage'
 
 
 // function Copyright() {
@@ -153,8 +154,7 @@ export default function Dashboard(props) {
         <LogOutButton/>
       </Drawer>
       <main className={classes.content}>
-        
-        <LandingPageHeader />
+        <DashBoardPage />
       </main>
     </div>
     

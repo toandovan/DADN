@@ -24,6 +24,11 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap');
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -2556,6 +2561,7 @@ p {
   font-size: 1.2em; }
 
 .title {
+  font-family: 'Montserrat';
   font-weight: 700;
   padding-top: 30px; }
   .title.title-up {
@@ -2570,7 +2576,9 @@ p {
 .card-description,
 .footer-big p {
   color: #9A9A9A;
-  font-weight: 300; }
+  font-weight: 300; 
+  font-family: 'Montserrat';
+}
 
 .category {
   text-transform: capitalize;
@@ -2627,7 +2635,9 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth; }
+  
 
 .main {
   position: relative;
@@ -2776,7 +2786,7 @@ Created using IcoMoon - icomoon.io
 
 -------------------------------- */
 @font-face {
-  font-family: 'Nucleo Outline';
+  font-family: 'Montserrat';
   /* src: url("../fonts/nucleo-outline.eot");
   src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype"); */
   font-weight: normal;
