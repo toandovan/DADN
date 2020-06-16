@@ -15,7 +15,7 @@ const request = async () => {
     return
   }
   // console.log(x)
-  x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[1])))
+  x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[0])))
 }
 request()
 export default function Chart() {

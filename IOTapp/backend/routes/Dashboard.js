@@ -1,6 +1,7 @@
 var express = require('express');
-const sensor= require('../models/humidities')
+// const sensor= require('../models/humidities')
 const mongoose=require('mongoose')
+let sensor = mongoose.model('humidities')
 var router = express.Router();
 /* GET home page. */
 router.get('/date/:date/', function(req, res, next) {

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require('mongoose')
+let Subscriber = require('./routes/subscriber')
 
 var cb = function(err){
   if(!err)
@@ -61,5 +62,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+Subscriber.Subscribe()
 
 module.exports = app;
