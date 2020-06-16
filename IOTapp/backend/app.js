@@ -21,6 +21,7 @@ var dashBoardRouter=require('./routes/Dashboard')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var deviceRouter = require('./routes/deviceList');
+let sendSensorData = require('./routes/sendSensorData')
 
 var app = express();
 
@@ -38,7 +39,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/Dashboard', dashBoardRouter);
 app.use('/device', deviceRouter);
-
+app.use('/Dashboard/sensorData', sendSensorData);
 
 app.get('/api/home', function(req, res) {
   res.send('Welcome!');

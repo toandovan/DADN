@@ -25,7 +25,6 @@ import TableInfo from './TableInfo';
 // import LandingPageHeader from './HeaderPage';
 import DashBoardPage from './DashBoardPage'
 
-
 // function Copyright() {
 //   return (
 //     <Typography variant="body2" color="textSecondary" align="center">
@@ -152,6 +151,7 @@ export default function Dashboard(props) {
         <SensorButton />
         <MotorButton />
         <LogOutButton/>
+
       </Drawer>
       <main className={classes.content}>
         <DashBoardPage />

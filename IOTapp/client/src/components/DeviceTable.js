@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 import ToggleButton from './Button1'
+import InputSlider from './Slider';
 
 // Generate Order Data
 function createData(id,device_id, sensor_type, value, status) {
@@ -17,21 +18,21 @@ function createData(id,device_id, sensor_type, value, status) {
 //create data humidity and temperature
 
 const humidityData = [
-  createData(0, 'aa', 'aa', 'aa', 'aa'),
-  createData(1, '', '', '', ''),
-  createData(2, '', '', '', ''),
-  createData(3, '', '', '', ''),
-  createData(4  , '', '', '', ''),
-  createData(5  , '', '', '', ''),
+  createData(0, 'Speaker0', 'aa', 'aa', 'aa'),
+  createData(1, 'Speaker1', '', '', ''),
+  createData(2, 'Speaker2', '', '', ''),
+  createData(3, 'Speaker3', '', '', ''),
+  createData(4  , 'Speaker4', '', '', ''),
+  createData(5  , 'Speaker5', '', '', ''),
 ];
-const temperatureData = [
-  createData(0, 'bb', 'bb', 'bb', 'bb'),
-  createData(1, '', '', '', ''),
-  createData(2, '', '', '', ''),
-  createData(3, '', '', '', ''),
-  createData(4  , '', '', '', ''),
-  createData(5  , '', '', '', ''),
-];
+// const temperatureData = [
+//   createData(0, 'bb', 'bb', 'bb', 'bb'),
+//   createData(1, '', '', '', ''),
+//   createData(2, '', '', '', ''),
+//   createData(3, '', '', '', ''),
+//   createData(4  , '', '', '', ''),
+//   createData(5  , '', '', '', ''),
+// ];
 
 function preventDefault(event) {
   event.preventDefault();
@@ -68,7 +69,8 @@ export default function TableInfo() {
               <TableCell>{row.value}</TableCell>
               <TableCell >{row.status}</TableCell>
               <TableCell align="center" >
-                <ToggleButton />
+                {/* <ToggleButton /> */}
+                <InputSlider idDevice={row.device_id} />
               </TableCell>
             </TableRow>
           ))}
