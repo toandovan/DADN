@@ -43,23 +43,10 @@ function ChangeSpeakerReq(array){
 
 export default function InputSlider(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = React.useState(value = 30);
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
-
-    let arrayjson = (newValue == 0) 
-                            ? 
-                            [{ "device_id": props.idDevice, 
-                                "values": ["0", "0"]
-                            }] 
-                            : 
-                            [{ "device_id": props.idDevice, 
-                                "values": ["1", newValue.toString()]
-                            }] 
-
-    console.log(arrayjson)
-    ChangeSpeakerReq(arrayjson)
   };
 
   const handleInputChange = (event) => {
@@ -74,6 +61,24 @@ export default function InputSlider(props) {
     }
   };
 
+  const handleSliderToSave = (event, newValue) => {
+    console.log("after mouse up, value after mouse up ")
+    console.log(newValue)
+
+    let array_json = (newValue == 0) 
+                            ? 
+                            [{ "device_id": props.idDevice, 
+                                "values": ["0", "0"]
+                            }] 
+                            : 
+                            [{ "device_id": props.idDevice, 
+                                "values": ["1", newValue.toString()]
+                            }];
+
+    console.log(array_json)
+    ChangeSpeakerReq(array_json)
+  }
+
   return (
     <div className={classes.root} style={{margin: "0 auto 0 auto"}}>
       <Typography id="input-slider" gutterBottom>
@@ -87,6 +92,7 @@ export default function InputSlider(props) {
           <Slider
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
+            onChangeCommitted={handleSliderToSave}
             aria-labelledby="input-slider"
             valueLabelDisplay="auto"
           />
