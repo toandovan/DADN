@@ -13,7 +13,7 @@ function Publisher(id, val0, val1){
     // });
 
     // client.on('connect',function(){
-    //     console.log("OK")
+    //     console.log("OK-pub-done")
     //     client.publish('Topic/Speaker', object);
     // })
 

@@ -22,6 +22,21 @@ const request = async () => {
   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[0])))
   // return temp_data
 }
+
+const request2 = async () => {
+  // let temp_data = []
+  let data2 = []
+  const response = await fetch('/Dashboard/date/'+Date.now());
+  const json = await response.json();
+  const x=JSON.parse(JSON.stringify(json))
+  if (x==""){
+    return
+  }
+  // console.log(x)
+  x.sensorData.map(res=>data2.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[0])))
+  // return temp_data
+  return data2[data.length -1]
+}
 request()
 export default function Chart() {
 
@@ -35,14 +50,40 @@ export default function Chart() {
     const socket = socketIOClient(ENDPOINT);
     socket.on("FromAPI", flag => {
       if(flag){
-        console.log(flag)
-        request()
-        console.log(data)
-        setdataState(data)
+        // request()
+        // console.log(data)
+        let y = request2()
+        setdataState(curdata=>[...curdata, y])
       }
       // setdataState(newdata);
     });
   }, []);
+
+  // function aa(){
+  //   const socket = socketIOClient(ENDPOINT);
+  //   socket.on("FromAPI", flag => {
+  //     if(flag){
+  //       console.log(flag)
+  //       request()
+  //       console.log(data)
+  //       setdataState([...data])
+  //     }
+  //     // setdataState(newdata);
+  //   });
+  // }
+
+  // const socket = socketIOClient(ENDPOINT);
+  //   socket.on("FromAPI", flag => {
+  //     if(flag){
+  //       console.log(flag)
+  //       request()
+  //       console.log(data)
+  //       setdataState([...data])
+  //     }
+  //     // setdataState(newdata);
+  //   });
+
+  
 
   const theme = useTheme();
   return (
@@ -51,6 +92,11 @@ export default function Chart() {
       <ResponsiveContainer>
         <LineChart
           data={dataState}
+          // onClick={()=>{
+          //   request();
+          //   setdataState(data)
+          //   console.log(data)
+          // }}
           margin={{
             top: 16,
             right: 16,
@@ -60,7 +106,7 @@ export default function Chart() {
         >
           <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
           <YAxis stroke={theme.palette.text.secondary}>
-            <Label
+            <Label 
               angle={270}
               position="left"
               style={{ textAnchor: 'middle', fill: theme.palette.text.primary }}
