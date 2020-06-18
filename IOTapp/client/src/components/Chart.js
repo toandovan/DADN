@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
+import socketIOClient from "socket.io-client";
+const ENDPOINT = "http://localhost:3001";
 
 function createData(time, amount) {
   return { time, amount };
@@ -16,16 +18,28 @@ const request = async () => {
   }
   // console.log(x)
   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[0])))
+
 }
 request()
 export default function Chart() {
+
+  const [dataState, setdataState] = useState(data)
+
+  // useEffect(() => {
+  //   const socket = socketIOClient(ENDPOINT);
+  //   socket.on("FromAPI", newdata => {
+  //     // setdataState(newdata);
+  //     console.log(newdata)
+  //   });
+  // }, []);
+
   const theme = useTheme();
   return (
     <React.Fragment>
       <Title>Today</Title>
       <ResponsiveContainer>
         <LineChart
-          data={data}
+          data={dataState}
           margin={{
             top: 16,
             right: 16,

@@ -18,12 +18,12 @@ function createData(id,device_id, sensor_type, value, status) {
 //create data humidity and temperature
 
 const humidityData = [
-  createData(0, 'Speaker0', 'aa', 'aa', 'aa'),
-  createData(1, 'Speaker1', '', '', ''),
-  createData(2, 'Speaker2', '', '', ''),
-  createData(3, 'Speaker3', '', '', ''),
-  createData(4  , 'Speaker4', '', '', ''),
-  createData(5  , 'Speaker5', '', '', ''),
+  createData(0, 'Speaker0', 'speaker'),
+  // createData(1, 'Speaker1', '', '', ''),
+  // createData(2, 'Speaker2', '', '', ''),
+  // createData(3, 'Speaker3', '', '', ''),
+  // createData(4  , 'Speaker4', '', '', ''),
+  // createData(5  , 'Speaker5', '', '', ''),
 ];
 // const temperatureData = [
 //   createData(0, 'bb', 'bb', 'bb', 'bb'),
@@ -55,8 +55,6 @@ export default function TableInfo() {
             <TableCell>No</TableCell>
             <TableCell>Device id</TableCell>
             <TableCell>Type </TableCell>
-            <TableCell>Value </TableCell>
-            <TableCell >Status</TableCell>
             <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
@@ -66,8 +64,6 @@ export default function TableInfo() {
               <TableCell>{row.id}</TableCell>
               <TableCell>{row.device_id}</TableCell>
               <TableCell>{row.sensor_type}</TableCell>
-              <TableCell>{row.value}</TableCell>
-              <TableCell >{row.status}</TableCell>
               <TableCell align="center" >
                 {/* <ToggleButton /> */}
                 <InputSlider idDevice={row.device_id} />
