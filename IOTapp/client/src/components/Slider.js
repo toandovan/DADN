@@ -32,10 +32,10 @@ const useStyles = makeStyles({
 
 function ChangeSpeakerReq(array){
   axios.post(`/Dashboard/sensorData`, { array })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+      // .then(res => {
+      //   console.log(res);
+      //   console.log(res.data);
+      // })
     }
 // async function ChangeSpeakerReq(array){
 //   const x = await fetch('/Dashboard/sensorData/' + Date.now())

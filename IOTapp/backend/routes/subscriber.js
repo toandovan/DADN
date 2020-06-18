@@ -74,7 +74,7 @@ function Subscribe() {
         var obj = JSON.parse(message);
         console.log(obj)
         Checkdata(obj, "Speaker", [0, 0])
-        // humidity.model(obj[0].device_id,'on',obj[0].values);
+        humidity.model(obj[0].device_id,'on',obj[0].values);
     })
 
 

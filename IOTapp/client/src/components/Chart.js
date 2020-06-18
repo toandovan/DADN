@@ -3,13 +3,15 @@ import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 import socketIOClient from "socket.io-client";
-const ENDPOINT = "http://localhost:3001";
+const ENDPOINT = "http://localhost:8080";
 
 function createData(time, amount) {
   return { time, amount };
 }
 var data=[]
 const request = async () => {
+  // let temp_data = []
+  data = []
   const response = await fetch('/Dashboard/date/'+Date.now());
   const json = await response.json();
   const x=JSON.parse(JSON.stringify(json))
@@ -18,20 +20,29 @@ const request = async () => {
   }
   // console.log(x)
   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),res.sensor_value[0])))
-
+  // return temp_data
 }
 request()
 export default function Chart() {
 
   const [dataState, setdataState] = useState(data)
-
-  // useEffect(() => {
-  //   const socket = socketIOClient(ENDPOINT);
-  //   socket.on("FromAPI", newdata => {
-  //     // setdataState(newdata);
-  //     console.log(newdata)
-  //   });
-  // }, []);
+  // const socket = io.connect(ENDPOINT);
+  // socket.on('FromAPI', (data) => {
+  //   console.log(data);
+  //   // socket.emit('my other event', { my: 'data' });
+  // });
+  useEffect(() => {
+    const socket = socketIOClient(ENDPOINT);
+    socket.on("FromAPI", flag => {
+      if(flag){
+        console.log(flag)
+        request()
+        console.log(data)
+        setdataState(data)
+      }
+      // setdataState(newdata);
+    });
+  }, []);
 
   const theme = useTheme();
   return (
