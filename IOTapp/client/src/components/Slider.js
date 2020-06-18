@@ -43,7 +43,7 @@ function ChangeSpeakerReq(array){
 
 export default function InputSlider(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(value = 30);
+  const [value, setValue] = React.useState(30);
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
