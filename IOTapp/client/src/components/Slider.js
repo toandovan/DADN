@@ -10,6 +10,7 @@ import SignalCellular2BarIcon from '@material-ui/icons/SignalCellular2Bar';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
 import SignalCellular4BarIcon from '@material-ui/icons/SignalCellular4Bar';
 import axios from 'axios';
+import debounce from 'lodash.debounce';
 
 function ChooseIcon(props){
     if(props.input == 100){return (<SignalCellular4BarIcon />)}
@@ -28,14 +29,6 @@ const useStyles = makeStyles({
   },
 });
 
-// async function ChangeSpeakerReq(array){
-//      const x = await fetch('/Dashboard/sensorData', {
-//         method: "POST",
-//         mode: 'no-cors',
-//         body: JSON.stringify({url: "test"}),
-//         headers: {'Content-Type': 'applications/json'}
-//     }).then(res=> console.log(res));
-//   }
 
 function ChangeSpeakerReq(array){
   axios.post(`/Dashboard/sensorData`, { array })
@@ -95,6 +88,7 @@ export default function InputSlider(props) {
             value={typeof value === 'number' ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
+            valueLabelDisplay="auto"
           />
         </Grid>
         <Grid item>

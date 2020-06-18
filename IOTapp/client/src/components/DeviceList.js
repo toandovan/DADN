@@ -165,7 +165,7 @@ export default function DeviceList(props) {
           </IconButton>
         </div>
         <DashboardButton/>
-        <MoisButton/>
+        <MoisButton/> 
         {/* <TemperatureButton/> */}
         <SensorButton />
         <MotorButton/>

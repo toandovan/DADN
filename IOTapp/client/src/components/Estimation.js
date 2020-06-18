@@ -22,7 +22,7 @@ const request = async () => {
   const x=JSON.parse(JSON.stringify(json))
   x.sensorData.map(res=>estimation+=parseFloat(res.sensor_value[0]))
   estimation=estimation/x.sensorData.length
-  estimation = (estimation*100).toFixed(2)
+  estimation = (estimation).toFixed(2)
 }
 request()
 //

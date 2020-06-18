@@ -66,4 +66,12 @@ app.use(function(err, req, res, next) {
 
 Subscriber.Subscribe()
 
+
+// let sensor = mongoose.model('humidities')
+// sensor.find({}, function (err, docs) {
+//   console.log(docs)
+// })
+    
+
+
 module.exports = app;
