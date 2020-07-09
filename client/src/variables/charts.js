@@ -97,6 +97,7 @@ let chart1_2_options = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
+let data_mois = [1]
 let chartExample1 = {
   data1: canvas => {
     let ctx = canvas.getContext("2d");
@@ -138,7 +139,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100]
+          data: data_mois
         }
       ]
     };
@@ -444,6 +445,7 @@ const chartExample4 = {
 };
 
 module.exports = {
+  data_mois,
   chartExample1, // in src/views/Dashboard.js
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js

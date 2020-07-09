@@ -44,13 +44,53 @@ import {
 
 // core components
 import {
+  data_mois,
   chartExample1,
   chartExample2,
   chartExample3,
   chartExample4
 } from "variables/charts.js";
-// let x = (chartExample1["data1"])
-// console.log(x())
+import { keys } from "@material-ui/core/styles/createBreakpoints";
+import { array } from "prop-types";
+// let x = (chartExample1["data1"].ctx)()
+// console.log(x)
+
+function createData(time, amount) {
+  return { time, amount };
+}
+let data = []
+const request = async () => {
+  // let temp_data = []
+  // let data = []
+  const response = await fetch('/Dashboard/date/'+Date.now());
+  const json = await response.json();
+  const x=JSON.parse(JSON.stringify(json))
+  if (x==""){
+    return
+  }
+  x.sensorData.map(res=>{
+    // console.log(res.sensor_value[0])
+    data_mois.push(parseInt(res.sensor_value[0]))
+    // console.log(data)
+  })
+  // return data
+}
+request()
+console.log(data_mois)
+// data.forEach(([key,value])=>{
+//   // data_mois.push(value)
+//   // console.log(key);
+//   console.log(value);
+// })
+// data.forEach(element => {console.log(element)});
+// for(let i = 0; i < data.length ; i++){
+//   data_mois.push(data[i])
+// }
+// data_mois.push([...data])
+// console.log(data_mois)
+// console.log(data_mois)
+
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);

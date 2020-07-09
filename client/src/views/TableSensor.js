@@ -58,7 +58,7 @@ class Tables extends React.Component {
                     </thead>
                     <tbody>
                       {humidityData.map((row) => (
-                        <tr>
+                      <tr key={row[0]}>
                         <td>{row[0]}</td>
                         <td>{row[1]}</td>
                         <td>{row[2]}</td>

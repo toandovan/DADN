@@ -7,4 +7,5 @@ const sensorSchema=new mongoose.Schema({
     motorValue: String,
     scheduleDate: Number
 })
-module.exports=mongoose.model('deviceModel',sensorSchema)
+
+module.exports=mongoose.model('devices',sensorSchema)
