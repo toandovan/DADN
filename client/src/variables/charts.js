@@ -79,10 +79,28 @@ let chart1_2_options = {
 // // // used inside src/views/Dashboard.js
 // #########################################
 let data_mois = []
-
+function CheckDay(db_day) {
+  let Curr_day = ((new Date()).toLocaleDateString())
+  let day = (new Date(db_day)).toLocaleDateString()
+  if (day === "13/6/2020") {
+    return true
+  }
+  return false
+}
+// console.log(data_mois)
 let chartExample1 = {
-  data1: canvas =>  {
-    console.log(data_mois)
+  data1: canvas => {
+    let time_label = []
+    data_mois[1].forEach(x => {
+      if (CheckDay(x)) {
+        time_label.push(
+          (new Date(x)).getHours().toString().padStart(2, '0')
+          + ":" + 
+          (new Date(x)).getMinutes().toString().padStart(2, '0')
+        )}
+      })
+    // label_time = []
+    // data_mois[1].forEach(x => {} )
     let ctx = canvas.getContext("2d");
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -92,20 +110,7 @@ let chartExample1 = {
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      labels: [
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC"
-      ],
+      labels: time_label,
       datasets: [
         {
           label: "My First dataset",
@@ -122,7 +127,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: data_mois
+          data: data_mois[0]
         }
       ]
     };

@@ -126,12 +126,15 @@ class Dashboard extends React.Component {
     this.setState({
       bigChartData: name
     });
+    // console.log("done")
     // console.log(this.state.bigChartData)
   };
 
   request = async () => {
     // let temp_data = []
     let data = []
+    let time = []
+    // let data_time = {}
     const response = await fetch('/Dashboard/date/'+Date.now());
     const json = await response.json();
     const x=JSON.parse(JSON.stringify(json))
@@ -141,19 +144,24 @@ class Dashboard extends React.Component {
     x.sensorData.map(res=>{
       // console.log(res.sensor_value[0])
       data.push(parseInt(res.sensor_value[0]))
+      time.push(new Date(res.date))
+      // date_time.push(parseInt(res.sensor_value[0]): res.Date)
       // console.log(data)
     })
-    return data
+    return [data,time]
+    // return date_time
   }
 
 
   componentDidMount(){
 
     this.setState({ loading: 'true' })
-    this.request().then((data)=>{
-      data.forEach(data_ele => data_mois.push(data_ele))
+    this.request().then((record)=>{
+      while (data_mois.length) { data_mois.pop(); }
+      record.forEach(data_ele => data_mois.push(data_ele))
+      console.log(data_mois)
       this.setState({ loading: 'false' })
-    })
+    }) 
   }
   
   render() {
@@ -169,6 +177,7 @@ class Dashboard extends React.Component {
     }
     
     return (
+      
       <>
         <div className="content">
           <Row>
@@ -193,9 +202,9 @@ class Dashboard extends React.Component {
                           color="info"
                           id="0"
                           size="sm"
-                          onClick={(e) => {
+                          onClick={async (e) => {
                             e.preventDefault()
-                            this.setBgChartData("data1")
+                            await this.setBgChartData("data1")
                             // console.log(this.state.bigChartData)
                             }}
                         >
@@ -206,7 +215,7 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Accounts
+                            Today
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-single-02" />
@@ -220,9 +229,9 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data2"
                           })}
-                          onClick={(e) => {
+                          onClick={async (e) => {
                             e.preventDefault()
-                            this.setBgChartData("data2")
+                            await this.setBgChartData("data2")
                             // console.log(this.state.bigChartData)
                             }}
                         >
@@ -232,7 +241,7 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Purchases
+                            Last Week
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-gift-2" />
@@ -246,9 +255,9 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data3"
                           })}
-                          onClick={(e) => {
+                          onClick={async (e) => {
                             e.preventDefault()
-                            this.setBgChartData("data3")
+                            await this.setBgChartData("data3")
                             // console.log(this.state.bigChartData)
                             }}
                         >
@@ -258,7 +267,7 @@ class Dashboard extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Sessions
+                            Last Month
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-tap-02" />
@@ -273,6 +282,7 @@ class Dashboard extends React.Component {
                     <Line
                       data={chartExample1[this.state.bigChartData]}
                       options={chartExample1.options}
+                      redraw={true}
                     />
             
                   </div>
