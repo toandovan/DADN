@@ -11,8 +11,7 @@ router.get('/date/:date/', function(req, res, next) {
   sensorMois.find({ date: { $gt: thirty_day_before } } )
   // .where('date').gt(y).lt(x)
   .exec().then((doc)=>{
-    // console.log(doc)
-    console.log(doc);
+    // console.log(doc);
     res.status(200).json({
       // message: 'handling get request',
       sensorData: doc

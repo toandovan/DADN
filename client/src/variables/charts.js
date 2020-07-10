@@ -99,6 +99,17 @@ function CheckMonth(db_day) {
   return (thirty_day_before < db_day)
 }
 
+// function CheckDup(arr, day){
+//   let count = 0
+//   arr.forEach(d => {
+//     let exact_day = (new Date(d)).toLocaleDateString()
+//     if(exact_day==day){
+//       count++
+//     }
+//   })
+//   if(count>0){return count}
+// }
+
 // console.log(data_mois)
 let chartExample1 = {
   data1: canvas => {
@@ -149,16 +160,21 @@ let chartExample1 = {
   data2: canvas => {
     let week_label = []
     let week_data = []
-    data_mois[1].forEach((x,i) => {
-      if (CheckWeek(x)) {
-        week_label.push(
-          (new Date(x)).getHours().toString().padStart(2, '0')
-          + ":" + 
-          (new Date(x)).getMinutes().toString().padStart(2, '0')
-        )
-        week_data.push(data_mois[0][i])
-      }
-      })
+    let week_obj = {}
+    // data_mois[1].forEach((x,i) => {
+    //   if (CheckWeek(x)) {
+    //     let key = (new Date(x)).toLocaleDateString()
+    //     if(week_obj[key]){
+    //       week_obj[key] += data_mois[0][i]
+    //     } 
+    //     else{
+    //       week_obj[key] = data_mois[0][i]
+    //     }
+    //   }
+    // })
+    // Object.keys(week_obj).forEach(key => {
+    //   week_obj[key] = week_obj[key]/CheckDup(data_mois[1],key)
+    // })
 
     let ctx = canvas.getContext("2d");
 
@@ -183,6 +199,7 @@ let chartExample1 = {
         "NOV",
         "DEC"
       ],
+      // labels: Object.keys(week_obj),
       datasets: [
         {
           label: "My First dataset",
@@ -200,6 +217,7 @@ let chartExample1 = {
           pointHoverBorderWidth: 15,
           pointRadius: 4,
           data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120]
+          // data: Object.values(week_obj)
         }
       ]
     };
