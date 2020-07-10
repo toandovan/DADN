@@ -87,6 +87,18 @@ function CheckDay(db_day) {
   }
   return false
 }
+
+
+function CheckWeek(db_day) {
+  var seven_day_before = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000));
+  return (seven_day_before < db_day)
+}
+
+function CheckMonth(db_day) {
+  var thirty_day_before = new Date(Date.now() - (30 * 7 * 24 * 60 * 60 * 1000));
+  return (thirty_day_before < db_day)
+}
+
 // console.log(data_mois)
 let chartExample1 = {
   data1: canvas => {
@@ -135,6 +147,19 @@ let chartExample1 = {
     };
   },
   data2: canvas => {
+    let week_label = []
+    let week_data = []
+    data_mois[1].forEach((x,i) => {
+      if (CheckWeek(x)) {
+        week_label.push(
+          (new Date(x)).getHours().toString().padStart(2, '0')
+          + ":" + 
+          (new Date(x)).getMinutes().toString().padStart(2, '0')
+        )
+        week_data.push(data_mois[0][i])
+      }
+      })
+
     let ctx = canvas.getContext("2d");
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
