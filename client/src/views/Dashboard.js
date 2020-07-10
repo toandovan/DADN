@@ -52,31 +52,54 @@ import {
 } from "variables/charts.js";
 import { keys } from "@material-ui/core/styles/createBreakpoints";
 import { array } from "prop-types";
+
+
+// const request = async () => {
+//   // let temp_data = []
+//   let data = []
+//   const response = await fetch('/Dashboard/date/'+Date.now());
+//   const json = await response.json();
+//   const x=JSON.parse(JSON.stringify(json))
+//   if (x==""){
+//     return
+//   }
+//   x.sensorData.map(res=>{
+//     // console.log(res.sensor_value[0])
+//     data.push(parseInt(res.sensor_value[0]))
+//     // console.log(data)
+//   })
+//   return data
+// }
+
+
+
+
 // let x = (chartExample1["data1"].ctx)()
 // console.log(x)
 
 function createData(time, amount) {
   return { time, amount };
 }
-let data = []
-const request = async () => {
-  // let temp_data = []
-  // let data = []
-  const response = await fetch('/Dashboard/date/'+Date.now());
-  const json = await response.json();
-  const x=JSON.parse(JSON.stringify(json))
-  if (x==""){
-    return
-  }
-  x.sensorData.map(res=>{
-    // console.log(res.sensor_value[0])
-    data_mois.push(parseInt(res.sensor_value[0]))
-    // console.log(data)
-  })
-  // return data
-}
-request()
-console.log(data_mois)
+// let data = []
+// const request = async () => {
+//   // let temp_data = []
+//   // let data = []
+//   const response = await fetch('/Dashboard/date/'+Date.now());
+//   const json = await response.json();
+//   const x=JSON.parse(JSON.stringify(json))
+//   if (x==""){
+//     return
+//   }
+//   x.sensorData.map(res=>{
+//     // console.log(res.sensor_value[0])
+//     data_mois.push(parseInt(res.sensor_value[0]))
+//     // console.log(data)
+//   })
+//   // return data
+// }
+
+
+// console.log(data_mois[1])
 // data.forEach(([key,value])=>{
 //   // data_mois.push(value)
 //   // console.log(key);
@@ -95,15 +118,56 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bigChartData: "data1"
+      bigChartData: "data1",
+      loading: 'init'
     };
   }
   setBgChartData = name => {
     this.setState({
       bigChartData: name
     });
+    // console.log(this.state.bigChartData)
   };
+
+  request = async () => {
+    // let temp_data = []
+    let data = []
+    const response = await fetch('/Dashboard/date/'+Date.now());
+    const json = await response.json();
+    const x=JSON.parse(JSON.stringify(json))
+    if (x==""){
+      return
+    }
+    x.sensorData.map(res=>{
+      // console.log(res.sensor_value[0])
+      data.push(parseInt(res.sensor_value[0]))
+      // console.log(data)
+    })
+    return data
+  }
+
+
+  componentDidMount(){
+
+    this.setState({ loading: 'true' })
+    this.request().then((data)=>{
+      data.forEach(data_ele => data_mois.push(data_ele))
+      this.setState({ loading: 'false' })
+    })
+  }
+  
   render() {
+    if (this.state.loading === 'init') {
+      console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
+      return <h2>Intializing...</h2>;
+    }
+
+
+    if (this.state.loading === 'true') {
+      console.log('This happens 5th - when waiting for data.');
+      return <h2>Loading...</h2>;
+    }
+    
     return (
       <>
         <div className="content">
@@ -129,7 +193,11 @@ class Dashboard extends React.Component {
                           color="info"
                           id="0"
                           size="sm"
-                          onClick={() => this.setBgChartData("data1")}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            this.setBgChartData("data1")
+                            // console.log(this.state.bigChartData)
+                            }}
                         >
                           <input
                             defaultChecked
@@ -152,7 +220,11 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data2"
                           })}
-                          onClick={() => this.setBgChartData("data2")}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            this.setBgChartData("data2")
+                            // console.log(this.state.bigChartData)
+                            }}
                         >
                           <input
                             className="d-none"
@@ -174,7 +246,11 @@ class Dashboard extends React.Component {
                           className={classNames("btn-simple", {
                             active: this.state.bigChartData === "data3"
                           })}
-                          onClick={() => this.setBgChartData("data3")}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            this.setBgChartData("data3")
+                            // console.log(this.state.bigChartData)
+                            }}
                         >
                           <input
                             className="d-none"
@@ -195,10 +271,10 @@ class Dashboard extends React.Component {
                 <CardBody>
                   <div className="chart-area">
                     <Line
-                      
                       data={chartExample1[this.state.bigChartData]}
                       options={chartExample1.options}
                     />
+            
                   </div>
                 </CardBody>
               </Card>

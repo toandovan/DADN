@@ -22,26 +22,7 @@
 // ##############################
 // // // Chart variables
 // #############################
-function createData(time, amount) {
-  return { time, amount };
-}
-// const x = async () => {
-//   return 1
-// }
-// const request = async () => {
-//   // let temp_data = []
-//   let data = []
-//   const response = await fetch('/Dashboard/date/'+Date.now());
-//   const json = await response.json();
-//   const x=JSON.parse(JSON.stringify(json))
-//   if (x==""){
-//     return
-//   }
-//   console.log(x)
-//   x.sensorData.map(res=>data.push(createData((new Date(res.date)).getUTCMinutes(),parseInt(res.sensor_value[0]))))
-//   return data
-// }
-// let data_mois = request()
+
 
 // chartExample1 and chartExample2 options
 let chart1_2_options = {
@@ -97,9 +78,11 @@ let chart1_2_options = {
 // #########################################
 // // // used inside src/views/Dashboard.js
 // #########################################
-let data_mois = [1]
+let data_mois = []
+
 let chartExample1 = {
-  data1: canvas => {
+  data1: canvas =>  {
+    console.log(data_mois)
     let ctx = canvas.getContext("2d");
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
