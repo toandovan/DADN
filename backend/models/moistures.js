@@ -9,7 +9,7 @@ const sensorSchema=new mongoose.Schema({
 })
 let mois = mongoose.model('moistures',sensorSchema)
 let model= (device_id,area, status,sensor_value)=>{
-    var abc=new sensorModel(
+    var abc=new mois(
         {   device_id:device_id,
             date: Date.now(),
             area: area,

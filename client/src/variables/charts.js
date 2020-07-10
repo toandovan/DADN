@@ -82,7 +82,7 @@ let data_mois = []
 function CheckDay(db_day) {
   let Curr_day = ((new Date()).toLocaleDateString())
   let day = (new Date(db_day)).toLocaleDateString()
-  if (day === "13/6/2020") {
+  if (day === Curr_day) {
     return true
   }
   return false
