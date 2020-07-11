@@ -50,8 +50,8 @@ import {
   chartExample3,
   chartExample4
 } from "variables/charts.js";
-import { keys } from "@material-ui/core/styles/createBreakpoints";
-import { array } from "prop-types";
+// import { keys } from "@material-ui/core/styles/createBreakpoints";
+// import { array } from "prop-types";
 
 
 // const request = async () => {

@@ -99,16 +99,17 @@ function CheckMonth(db_day) {
   return (thirty_day_before < db_day)
 }
 
-// function CheckDup(arr, day){
-//   let count = 0
-//   arr.forEach(d => {
-//     let exact_day = (new Date(d)).toLocaleDateString()
-//     if(exact_day==day){
-//       count++
-//     }
-//   })
-//   if(count>0){return count}
-// }
+function CheckDup(arr, day){
+  let count = 0
+  arr.forEach(d => {
+    let exact_day = (new Date(d)).toLocaleDateString()
+    if(exact_day==day){
+      count++
+    }
+  })
+  if(count>0){return count}
+  else{return 1}
+}
 
 // console.log(data_mois)
 let chartExample1 = {
@@ -158,23 +159,23 @@ let chartExample1 = {
     };
   },
   data2: canvas => {
-    let week_label = []
-    let week_data = []
+    // let week_label = []
+    // let week_data = []
     let week_obj = {}
-    // data_mois[1].forEach((x,i) => {
-    //   if (CheckWeek(x)) {
-    //     let key = (new Date(x)).toLocaleDateString()
-    //     if(week_obj[key]){
-    //       week_obj[key] += data_mois[0][i]
-    //     } 
-    //     else{
-    //       week_obj[key] = data_mois[0][i]
-    //     }
-    //   }
-    // })
-    // Object.keys(week_obj).forEach(key => {
-    //   week_obj[key] = week_obj[key]/CheckDup(data_mois[1],key)
-    // })
+    data_mois[1].forEach((x,i) => {
+      if (CheckWeek(x)) {
+        let key = (new Date(x)).toLocaleDateString()
+        if(week_obj[key]){
+          week_obj[key] += data_mois[0][i]
+        } 
+        else{
+          week_obj[key] = data_mois[0][i]
+        }
+      }
+    })
+    Object.keys(week_obj).forEach(key => {
+      week_obj[key] = week_obj[key]/CheckDup(data_mois[1],key)
+    })
 
     let ctx = canvas.getContext("2d");
 
@@ -185,21 +186,21 @@ let chartExample1 = {
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      labels: [
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC"
-      ],
-      // labels: Object.keys(week_obj),
+      // labels: [
+      //   "JAN",
+      //   "FEB",
+      //   "MAR",
+      //   "APR",
+      //   "MAY",
+      //   "JUN",
+      //   "JUL",
+      //   "AUG",
+      //   "SEP",
+      //   "OCT",
+      //   "NOV",
+      //   "DEC"
+      // ],
+      labels: Object.keys(week_obj),
       datasets: [
         {
           label: "My First dataset",
@@ -216,8 +217,8 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120]
-          // data: Object.values(week_obj)
+          // data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120]
+          data: Object.values(week_obj)
         }
       ]
     };

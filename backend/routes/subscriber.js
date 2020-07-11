@@ -45,10 +45,10 @@ function Subscribe() {
 
     /////////////////////////////////////////////////////////
 
-    // broker = "40.112.49.62"
-    server_muon = "52.187.119.84"
+    broker = "40.112.49.62"
+    // server_muon = "52.187.119.84"
     var clientTest = mqtt.connect({
-        host: server_muon
+        host: broker
     });
 
     clientTest.on('connect', function () {
