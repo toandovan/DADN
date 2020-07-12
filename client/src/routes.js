@@ -23,6 +23,7 @@ import Notifications from "views/Notifications.js";
 import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
+import TableDevice from "views/TableDevice.js"
 import TableSensor from "views/TableSensor.js"
 
 var routes = [
@@ -34,10 +35,17 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/tableSensor",
+    path: "/TableSensor",
     name: "Table Sensor",
     icon: "tim-icons icon-puzzle-10",
     component: TableSensor,
+    layout: "/admin"
+  },
+  {
+    path: "/TableDevice",
+    name: "Table Device",
+    icon: "tim-icons icon-puzzle-10",
+    component: TableDevice,
     layout: "/admin"
   },
   // {
