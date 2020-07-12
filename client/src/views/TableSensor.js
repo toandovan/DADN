@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-
+import socketIOClient from "socket.io-client";
 // reactstrap components
 import {
   Card,
@@ -27,47 +27,86 @@ import {
   Row,
   Col
 } from "reactstrap";
-
-import InputSlider from "../variables/Slider"
-
-
-const humidityData = [
-  [1, 'Speaker0', 'speaker', 'North'],
-]
+const ENDPOINT = "http://localhost:8080";
 class Tables extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      loading: 'init',
+      sensor: []
+    }
+    const socket=socketIOClient(ENDPOINT);
+    socket.on("FromAPI",flag=>{
+      if(flag){
+        this.request().then((res)=>{
+          this.setState({loading: 'true',sensor: res.sensorData});
+          this.setState({loading: 'false'});
+        })
+      }
+    })
+  }
+  request= async()=>{
+    const response= await fetch('/device/sensor');
+    const json=await response.json();
+    const x=JSON.parse(JSON.stringify(json));
+    return x;
+  }
+  componentDidMount(){
+    //this.request
+    this.request().then((res)=>{
+      this.setState({loading: 'true',sensor: res.sensorData});
+      this.setState({loading: 'false'});
+      console.log(res);
+    })
+  }
   render() {
+    if (this.state.loading === 'init') {
+      console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
+      return <h2>Intializing...</h2>;
+    }
+
+
+    if (this.state.loading === 'true') {
+      console.log('This happens 5th - when waiting for data.');
+      return <h2>Loading...</h2>;
+    }
     return (
       <>
         <div className="content">
           <Row>
             <Col md="12">
-              <Card>
+              <Card className="card-plain">
                 <CardHeader>
-                  <CardTitle tag="h4">Simple Table</CardTitle>
+                  <CardTitle tag="h4">Table on Plain Background</CardTitle>
+                  <p className="category">Here is a subtitle for this table</p>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Number</th>
-                        <th>Device_ID</th>
-                        <th>Type</th>
+                        <th>Device ID</th>
                         <th>Area</th>
-                        <th className="text-center">Salary</th>
+                        <th>Type</th>
+                        <th className="text-center">value</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {humidityData.map((row) => (
-                      <tr key={row[0]}>
-                        <td>{row[0]}</td>
-                        <td>{row[1]}</td>
-                        <td>{row[2]}</td>
-                        <td>{row[3]}</td>
-                        <td><InputSlider idDevice={row[1]} /></td>
-                        {/* <td className="text-center">$36,738</td> */}
-                      </tr>
-                      ))}
-                      
+                      {
+                        this.state.sensor.map((data)=>(
+                          <tr>
+                            <td>{data._id}</td>
+                            <td>{data.area}</td>
+                            <td>{data.status}</td>
+                            <td className="text-center">{data.value}</td>
+                          </tr>
+                        ))
+                      }
+                      {/* <tr>
+                        <td>Dakota Rice</td>
+                        <td>Niger</td>
+                        <td>Oud-Turnhout</td>
+                        <td className="text-center">$36,738</td>
+                      </tr> */}
                     </tbody>
                   </Table>
                 </CardBody>

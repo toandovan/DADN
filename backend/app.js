@@ -8,6 +8,7 @@ let Subscriber = require('./routes/subscriber')
 const http = require("http");
 const socketIo = require("socket.io");
 let socket = require('./components/socketRealTime')
+const sendEmail = require('./components/sendEmail')
 
 var cb = function(err){
   if(!err)
@@ -73,10 +74,10 @@ Subscriber.Subscribe()
 // const server = require('http').Server(app);
 // const io = require('socket.io')(server);
 socket.realTime(app)
+// sendEmail.sendEmail()
+// sendEmail.Test()
 
 
-
-// let sensor = mongoose.model('humidities')
 // sensor.find({}, function (err, docs) {
 //   console.log(docs)
 // })

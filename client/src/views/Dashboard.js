@@ -173,7 +173,22 @@ class Dashboard extends React.Component {
 
     if (this.state.loading === 'true') {
       console.log('This happens 5th - when waiting for data.');
-      return <h2>Loading...</h2>;
+      return(
+        <>
+        <div className="content">
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h2">Loading...</CardTitle>
+                </CardHeader>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </>
+      )
+
     }
     
     return (

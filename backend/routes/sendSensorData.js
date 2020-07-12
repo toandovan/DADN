@@ -1,7 +1,5 @@
 var express = require('express');
-// const sensor= require('../models/humidities')
 // const mongoose=require('mongoose')
-// let sensor = mongoose.model('humidities')
 var router = express.Router();
 const publish = require('./publisher')
 /* GET home page. */

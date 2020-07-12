@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose=require('mongoose')
 const socketIo = require("socket.io");
 const http = require("http");
-let sensorChange = mongoose.model('humidities')
+let sensorChange = mongoose.model('moistures')
 
 
 

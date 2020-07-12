@@ -53,7 +53,7 @@ class Tables extends React.Component {
                         <th>Device_ID</th>
                         <th>Type</th>
                         <th>Area</th>
-                        <th className="text-center">Salary</th>
+                        <th className="text-center">Controller</th>
                       </tr>
                     </thead>
                     <tbody>
