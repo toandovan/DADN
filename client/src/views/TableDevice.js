@@ -32,7 +32,7 @@ import InputSlider from "../variables/Slider"
 
 
 const humidityData = [
-  [1, 'Speaker0', 'speaker', 'North'],
+  ['Speaker'],
 ]
 class Tables extends React.Component {
   render() {
@@ -49,24 +49,15 @@ class Tables extends React.Component {
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Number</th>
                         <th>Device_ID</th>
-                        <th>Type</th>
-                        <th>Area</th>
                         <th className="text-center">Controller</th>
-                        <th>Event</th>
                       </tr>
                     </thead>
                     <tbody>
                       {humidityData.map((row) => (
                       <tr key={row[0]}>
                         <td>{row[0]}</td>
-                        <td>{row[1]}</td>
-                        <td>{row[2]}</td>
-                        <td>{row[3]}</td>
                         <td><InputSlider idDevice={row[1]} /></td>
-                        {/* <td className="text-center">$36,738</td> */}
-                        <td>Yes</td>
                       </tr>
                       ))}
                       
