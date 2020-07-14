@@ -21,21 +21,47 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin/Admin.js";
+// import SignIn from "./views/SignIn.js"
+// import AuthApi from "./variables/AuthApi.js"
 // import RTLLayout from "layouts/RTL/RTL.js";
 
 import "assets/scss/black-dashboard-react.scss";
 import "assets/demo/demo.css";
 import "assets/css/nucleo-icons.css";
 
-const hist = createBrowserHistory();
+// function NAT() {
+//   const [auth, setAuth] = React.useState(false)
+//   const RouteSignIn = ({ component: Component, ...rest }) => {
+//     const authapi = React.useContext(AuthApi)
+//     // console.log({...rest})
+//     return (
+//       // eslint-disable-next-line
+//       <Route {...rest} render={props => (authapi.auth == false) ? <Component {...props} /> : <Redirect to="/admin" />} />
+//     )
+//   }
+// return(
+//   <AuthApi.Provider value={{ auth, setAuth }}>
+//     <Router history={hist}>
+//       <Switch>
+        
+//         <Route path="/admin" render={props => <AdminLayout {...props} />} />
+//         <RouteSignIn path="/" component={SignIn} />
+//         <Redirect from="/" to="/admin/dashboard" />
+//       </Switch>
+//     </Router>,
+//   </AuthApi.Provider>
+// )
+// }
 
+const hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      {/* <Route path="/rtl" render={props => <RTLLayout {...props} />} /> */}
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
+      <Switch>        
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+        <Redirect from="/" to="/admin/dashboard" />
+      </Switch>
+    </Router>,
   document.getElementById("root")
 );
+
+

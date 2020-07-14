@@ -25,6 +25,7 @@ import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import TableDevice from "views/TableDevice.js"
 import TableSensor from "views/TableSensor.js"
+import DeviceEvent from "views/DeviceEvent.js"
 
 var routes = [
   {
@@ -60,6 +61,13 @@ var routes = [
     name: "FarmMap",
     icon: "tim-icons icon-pin",
     component: FarmMap,
+    layout: "/admin"
+  },
+  {
+    path: "/DeviceEvent",
+    name: "Device Event",
+    icon: "tim-icons icon-pin",
+    component: DeviceEvent,
     layout: "/admin"
   },
   // {

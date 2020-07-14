@@ -26,6 +26,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var deviceRouter = require('./routes/deviceList');
 let sendSensorData = require('./routes/sendSensorData')
+let authUser = require('./routes/authServer')
 
 var app = express();
 
@@ -51,6 +52,8 @@ app.get('/api/home', function(req, res) {
 app.get('/api/secret', function(req, res) {
   res.send('The password is potato');
 });
+
+app.use("/api/", authUser)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

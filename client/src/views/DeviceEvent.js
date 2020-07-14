@@ -25,14 +25,16 @@ import {
   CardTitle,
   Table,
   Row,
-  Col
+  Col,
+  Button
 } from "reactstrap";
 
-import InputSlider from "../variables/Slider"
+import EventForm from "../variables/EventForm"
 
 
 const humidityData = [
-  [1, 'Speaker0', 'speaker', 'North'],
+  ['Speaker0', 'speaker', '10/07/2020', '10:00', '250'],
+  ['Speaker1', 'speaker', '12/07/2020', '09:00', '340'],
 ]
 class Tables extends React.Component {
   render() {
@@ -43,18 +45,18 @@ class Tables extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Simple Table</CardTitle>
+                  <CardTitle tag="h4">Schedule Table</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Number</th>
                         <th>Device_ID</th>
                         <th>Type</th>
-                        <th>Area</th>
-                        <th className="text-center">Controller</th>
-                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Intensity</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -64,9 +66,15 @@ class Tables extends React.Component {
                         <td>{row[1]}</td>
                         <td>{row[2]}</td>
                         <td>{row[3]}</td>
-                        <td><InputSlider idDevice={row[1]} /></td>
-                        {/* <td className="text-center">$36,738</td> */}
-                        <td>Yes</td>
+                        <td>{row[4]}</td>
+                        <td><Button 
+                              outline 
+                              size="sm" 
+                              color="primary"
+                              onClick={()=> {console.log(row[2] +" "+ row[3] )}}
+                            >
+                            remove</Button></td>
+
                       </tr>
                       ))}
                       
@@ -74,6 +82,7 @@ class Tables extends React.Component {
                   </Table>
                 </CardBody>
               </Card>
+              <EventForm />
             </Col>
           </Row>
         </div>

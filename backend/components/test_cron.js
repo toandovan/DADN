@@ -1,83 +1,40 @@
-// let cron = require('node-cron')
-// var CronJob = require('cron').CronJob;
-// var job = new CronJob('* * * * * *', function() {
-//   console.log('You will see this message every second');
-// }, null, true, 'America/Los_Angeles');
-// job.start();
-
-
-
-// let newCron = new cron()
-
-// var job = new CronJob();
-// var period = 1;
-// var CronJob = require('cron').CronJob;
-//  function createCron(job, newPeriod) {
-//   if (job) {
-//     job.stop();
-//     console.log("job stop")
-//   }
-//   job =  new CronJob('*/' + newPeriod + ' * * * * *', function () {
-//             console.log(newPeriod);
-//         }, null, true, "Indian/Mauritius");
-// }
-// createCron(job, 1);
-
-// setTimeout(function() {
-//   period = period * 2;
-//   createCron(job, period);
-// }, 3000);
-
-// function randomNum() {
-//     let a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-//     a.forEach(element => TestCron(element)
-//         // let a = element => {
-//         //     cron.schedule('*\10 * * * * *', (element) => {
-//         //         console.log(element)
-//         //     })
-//         // }
-//         // setTimeout( a, 3000);
-//     )
-
-// }
-
 
 const CronJob = require('cron').CronJob
 const CronTime = require('cron').CronTime
-
+let day = 1307
+let val1 = 0
+let val2 = 0
 const a = new CronJob('*/4 * * * * *', function () {
-  run() // function called inside cron
+  console.log(val1 +' to '+ val2) // function called inside cron
 }, null, false)
 
-let run = () => {
-  console.log('function called')
-}
+// let run = (day) => {
+//   console.log(day)
+// }
 
-let scheduler = () => {
-  console.log('CRON JOB STARTED WILL RUN IN EVERY 4 SECOND')
+let changeTime = (time) => {
+  let time_str = '*/'+time+' * * * * *'
+  a.stop()
+  a.setTime(new CronTime(time_str))
+  console.log("every "+time)
   a.start()
 }
 
-let schedulerStop = () => {
-  a.stop()
-  console.log('scheduler stopped')
+function Test(time,x1, x2){
+  val1 = x1
+  val2 = x2
+  changeTime(time)
 }
 
-let schedulerStatus = () => {
-  console.log('cron status ---->>>', a.running)
-}
-
-let changeTime = (input) => {
-  a.setTime(new CronTime(input))
-  console.log('changed to every 1 second')
-}
-
-scheduler()
-setTimeout(() => { schedulerStatus() }, 1000)
-setTimeout(() => { schedulerStop() }, 9000)
-setTimeout(() => { schedulerStatus() }, 10000)
-setTimeout(() => { changeTime('* * * * * *') }, 11000)
-setTimeout(() => { scheduler() }, 12000)
-setTimeout(() => { schedulerStop() }, 16000)
+Test(5,1,2)
+setTimeout(()=>Test(2,3,4), 20000)
+// Test(1000, 3,4)
+// scheduler()
+// setTimeout(() => { schedulerStatus() }, 1000)
+// setTimeout(() => { schedulerStop() }, 9000)
+// setTimeout(() => { schedulerStatus() }, 10000)
+// setTimeout(() => { changeTime('* * * * * *') }, 11000)
+// setTimeout(() => { scheduler() }, 12000)
+// setTimeout(() => { schedulerStop() }, 16000)
 
 // randomNum()

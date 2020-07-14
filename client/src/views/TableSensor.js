@@ -56,19 +56,45 @@ class Tables extends React.Component {
     this.request().then((res)=>{
       this.setState({loading: 'true',sensor: res.sensorData});
       this.setState({loading: 'false'});
-      console.log(res);
+      // console.log(res);
     })
   }
   render() {
     if (this.state.loading === 'init') {
-      console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
-      return <h2>Intializing...</h2>;
+      return(
+        <>
+        <div className="content">
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h2">Intializing...</CardTitle>
+                </CardHeader>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </>
+      )
     }
 
 
     if (this.state.loading === 'true') {
-      console.log('This happens 5th - when waiting for data.');
-      return <h2>Loading...</h2>;
+      return(
+        <>
+        <div className="content">
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h2">Loading...</CardTitle>
+                </CardHeader>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </>
+      )
     }
     return (
       <>

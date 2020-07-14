@@ -2,10 +2,9 @@ const mongoose=require('mongoose');
 //schema
 const deviceSchema=new mongoose.Schema({
     device_id: String,
-    area: String,
+    // area: String,
     status: String,
-    motorValue: String,
-    scheduleDate: Number
+    DeviceValue: String,
 })
 // let mois = mongoose.model('moistures',sensorSchema)
 // let model= (device_id,area, status,sensor_value)=>{
