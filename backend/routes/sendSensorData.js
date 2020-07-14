@@ -6,7 +6,7 @@ const publish = require('./publisher')
 router.post('/', function(req, res, next) {
   if(req.body.array){
     let tempvar = req.body.array
-    console.log(tempvar)
+    // console.log(tempvar)
     // let json = JSON.stringify([{ "device_id":"Speaker", "values": tempvar[0].values}])
     publish.Publisher("Speaker", tempvar[0].values[0], tempvar[0].values[1])
   }

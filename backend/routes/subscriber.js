@@ -5,7 +5,7 @@ const publish = require('./publisher')
 
 // const User=require('./models/sensorModel.js')
 function Checkdata(obj, id, value) {
-    console.log(value)
+    // console.log(value)
     if (obj[0].values[0] > 1) {
         publish.Publisher(id, value[0], value[1])
     }
