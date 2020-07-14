@@ -1,6 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
 import {
     Button
   } from "reactstrap";
@@ -17,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 300,
+  },
+  selectField: {
+    color: '#1F8EF1',
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 100,
   },
   numField: {
     color: '#1F8EF1',
@@ -43,8 +53,10 @@ export default function EventForm() {
   let [Intensity,SetIntensity] = React.useState(undefined)
   let [Date,setDate] = React.useState(undefined)
   let [Duration,setDuration] = React.useState(undefined)
+  let [Device, setDevice] = React.useState('');
+  let [open, setOpen] = React.useState(false);
 
-
+  let deviceList = ["Speaker"]
 
   const classes = useStyles();
 
@@ -58,12 +70,25 @@ export default function EventForm() {
     setDuration(e.target.value);
   }
 
+  function handleDeviceChange(e){
+    setDevice(e.target.value);
+  };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   function HandleEventClick(){
-    console.log(Date +' ' + Duration +' '+Intensity)
+    console.log(Date +' ' + Duration +' '+Intensity + ' '+Device)
     // axios.post(`/DeviceSchedule`, {[Date,Duration,Intensity]})
   }
+
+
+
 
 
 
@@ -121,7 +146,33 @@ export default function EventForm() {
         value={Intensity || ' '}
         onChange={(e)=>handleIntensityChange(e)}
       />
+       <FormControl className={classes.selectField}>
+       <InputLabel 
+       id="demo-controlled-open-select-label"
+       style={{color: "#1F8EF1"}}
+       >Device</InputLabel>
+        <Select
+           style={{color: "#1F8EF1"}}
+          labelId="demo-controlled-open-select-label"
+          id="demo-controlled-open-select"
+          open={open}
+          onClose={handleClose}
+          onOpen={handleOpen}
+          value={Device}
+          onChange={(e)=>{handleDeviceChange(e)}}
+        >
+          {deviceList.map((d) => (
+            <MenuItem key={d} value={d}>{d}</MenuItem>
+          ))}
+          {/* <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
+        </Select>
+
+       </FormControl>
       
+
+
       <Button 
         outline 
         size="sm" 

@@ -31,11 +31,66 @@ import {
 import InputSlider from "../variables/Slider"
 
 
-const humidityData = [
+const Device = [
   ['Speaker'],
 ]
 class Tables extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: 'init',
+      data: []
+    };
+  }
+  requestDevice = async () => {
+    const response = await fetch('/device/speaker');
+    const json = await response.json();
+    const x=JSON.parse(JSON.stringify(json))
+    if (x==""){
+      return
+    }
+    // x.sensorData.map(res=>{
+    //   data.push(parseInt(res.sensor_value[0]))
+    //   time.push(new Date(res.date))
+    // })
+    return x.speakerData
+  }
+  componentDidMount(){
+    this.setState({ loading: 'true' })
+    this.requestDevice().then((doc)=>{
+      this.setState({ 
+        loading: 'false',
+        data: doc
+      })
+    }
+    ) 
+  }
   render() {
+    if (this.state.loading === 'init') {
+      console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
+      return <h2>Intializing...</h2>;
+    }
+
+
+    if (this.state.loading === 'true') {
+      console.log('This happens 5th - when waiting for data.');
+      return(
+        <>
+        <div className="content">
+          <Row>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h2">Loading...</CardTitle>
+                </CardHeader>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </>
+      )
+
+    }
     return (
       <>
         <div className="content">
@@ -54,10 +109,10 @@ class Tables extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {humidityData.map((row) => (
-                      <tr key={row[0]}>
-                        <td>{row[0]}</td>
-                        <td><InputSlider idDevice={row[1]} /></td>
+                      {this.state.data.map((row) => (
+                      <tr key={row.device_id}>
+                        <td>{row.device_id}</td>
+                        <td><InputSlider idDevice={row.deviceValue} /></td>
                       </tr>
                       ))}
                       

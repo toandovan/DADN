@@ -42,7 +42,7 @@ function ChangeSpeakerReq(array){
 
 export default function InputSlider(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = React.useState(Number(props.idDevice));
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
@@ -74,7 +74,7 @@ export default function InputSlider(props) {
                                 "values": ["1", newValue.toString()]
                             }];
 
-    console.log(array_json)
+    // console.log(array_json)
     ChangeSpeakerReq(array_json)
   }
 

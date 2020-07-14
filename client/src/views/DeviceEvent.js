@@ -32,7 +32,7 @@ import {
 import EventForm from "../variables/EventForm"
 
 
-const humidityData = [
+const Schedule = [
   ['Speaker', '10/07/2020', '10:00', '250'],
 ]
 class Tables extends React.Component {
@@ -58,7 +58,7 @@ class Tables extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {humidityData.map((row) => (
+                      {Schedule.map((row) => (
                       <tr key={row[0]}>
                         <td>{row[0]}</td>
                         <td>{row[1]}</td>
