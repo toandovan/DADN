@@ -77,7 +77,8 @@ class ChartByDay extends React.Component {
     super(props);
     this.state = {
       loading: 'init',
-      dateFlag: ''
+      dateFlag: "2017-05-24",
+      
     };
   }
 
@@ -116,6 +117,7 @@ class ChartByDay extends React.Component {
   componentDidMount() {
 
     this.setState({ loading: 'true' })
+    localStorage.setItem("dateSelected", "2017-05-24")
     this.request().then((record) => {
       while (data_moisChart2.length) { data_moisChart2.pop(); }
       record.forEach(data_ele => data_moisChart2.push(data_ele))
@@ -168,7 +170,8 @@ class ChartByDay extends React.Component {
                           id="date"
                           label="Check value by day"
                           type="date"
-                          // defaultValue="2017-05-24"    
+                
+                          defaultValue="2017-05-24"    
                           // value={this.state.dateSelect}
                           // style={{
                           //   color: "white",

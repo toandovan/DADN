@@ -71,19 +71,14 @@ function Test() {
     <Router history={hist}>
       <Switch>
         {/* {(localStorage.getItem("auth") == "false" || localStorage.getItem("auth") == null || localStorage.getItem("auth") == undefined) && */}
-          <Route exact path="/login" component={SignIn} />
+        <Route exact path="/login" component={SignIn} />
         // }
         <Route exact path="/signup" component={SignUp} />
 
         {/* {localStorage.getItem("auth") == "true" && */}
-          <Route path="/admin" render={props => <AdminLayout {...props} />} />
-        {/* } */}
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
 
         <Redirect from="/" to="/login" />
-        {/* {(localStorage.getItem("auth") == "false") ? (<Redirect from="/" to="/login" />) : (<Redirect from="/" to="/admin/dashboard" />)} */}
-        {/* <Route exact path='/login' component={SignIn} />
-        <Route exact path='/signup' component={SignUp} />
-        <Route exact path='/admin' component={AdminLayout} /> */}
       </Switch>
     </Router>
   )
