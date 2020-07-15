@@ -79,10 +79,22 @@ let chart1_2_options = {
 // // // used inside src/views/Dashboard.js
 // #########################################
 let data_mois = []
+let data_moisChart2 = []
 function CheckDay(db_day) {
   let Curr_day = ((new Date()).toLocaleDateString())
   let day = (new Date(db_day)).toLocaleDateString()
   if (day === Curr_day) {
+    return true
+  }
+  return false
+}
+
+function CheckDayCond(db_day, anotherDay) {
+  let db_day2 = (new Date(db_day)).toLocaleDateString()
+  let dayhihi = anotherDay.split('-');
+  let dateConvert = parseInt(dayhihi[2]).toString() + '/' + parseInt(dayhihi[1]).toString() +'/'+parseInt(dayhihi[0]).toString()
+  console.log(db_day2 === dateConvert)
+  if (db_day2 === dateConvert) {
     return true
   }
   return false
@@ -139,7 +151,7 @@ let chartExample1 = {
       labels: day_label,
       datasets: [
         {
-          label: "My First dataset",
+          label: "Sensor Value",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
@@ -186,24 +198,10 @@ let chartExample1 = {
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      // labels: [
-      //   "JAN",
-      //   "FEB",
-      //   "MAR",
-      //   "APR",
-      //   "MAY",
-      //   "JUN",
-      //   "JUL",
-      //   "AUG",
-      //   "SEP",
-      //   "OCT",
-      //   "NOV",
-      //   "DEC"
-      // ],
       labels: Object.keys(week_obj),
       datasets: [
         {
-          label: "My First dataset",
+          label: "Sensor Value",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#1f8ef1",
@@ -276,33 +274,51 @@ let chartExample1 = {
 // #########################################
 let chartExample2 = {
   data: canvas => {
+    
+    let day_label = []
+    let day_data = []
+    data_moisChart2[1].forEach((x,i) => {
+      if (CheckDayCond(x, localStorage.getItem("dateSelected"))) {
+        day_label.push(
+          (new Date(x)).getHours().toString().padStart(2, '0')
+          + ":" + 
+          (new Date(x)).getMinutes().toString().padStart(2, '0')
+        )
+        day_data.push(data_moisChart2[0][i])
+      }
+      })
+
+
+
     let ctx = canvas.getContext("2d");
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    gradientStroke.addColorStop(1, "rgba(129,40,248,0.2)");
+    gradientStroke.addColorStop(0.4, "rgba(129,40,248,0.0)");
+    gradientStroke.addColorStop(0, "rgba(129,40,248,0)"); //blue colors
 
     return {
-      labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      // labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      labels: day_label,
       datasets: [
         {
           label: "Data",
           fill: true,
           backgroundColor: gradientStroke,
-          borderColor: "#1f8ef1",
+          borderColor: "rgb(129,40,248)",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#1f8ef1",
-          pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#1f8ef1",
+          pointBackgroundColor: "rgb(129,140,248)",
+          pointBorderColor: "rgba(129,140,248,0)",
+          pointHoverBackgroundColor: "rgb(129,140,248)",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 100, 70, 80, 120, 80]
+          // data: [80, 100, 70, 80, 120, 80]
+          data: day_data
         }
       ]
     };
@@ -480,6 +496,7 @@ const chartExample4 = {
 
 module.exports = {
   data_mois,
+  data_moisChart2,
   chartExample1, // in src/views/Dashboard.js
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js

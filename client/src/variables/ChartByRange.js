@@ -53,10 +53,6 @@ import {
   chartExample4
 } from "variables/charts.js";
 
-import ChartByDay from "../variables/ChartByDay"
-import ChartByRange from "../variables/ChartByRange"
-
-
 // import { keys } from "@material-ui/core/styles/createBreakpoints";
 // import { array } from "prop-types";
 
@@ -65,123 +61,87 @@ import ChartByRange from "../variables/ChartByRange"
 //   return { time, amount };
 // }
 
-let textStyles = makeStyles({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  text: {
-      color: '#1F8EF1', 
-      fontWeight: "bold",
-    },
+class ChartByRange extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bigChartData: "data1",
+      loading: 'init',
+    };
   }
-);
-class Dashboard extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     bigChartData: "data1",
-  //     loading: 'init',
-  //     dateFlag: ''
-  //   };
-  // }
-  // setBgChartData = name => {
-  //   this.setState({
-  //     bigChartData: name
-  //   });
-  //   // console.log("done")
-  //   // console.log(this.state.bigChartData)
-  // };
+  setBgChartData = name => {
+    this.setState({
+      bigChartData: name
+    });
+    // console.log("done")
+    // console.log(this.state.bigChartData)
+  };
 
-  // handleDateChange = (e) => {
-  //   console.log(e.target.value)
-  //   localStorage.setItem("dateSelected", e.target.value)
-  //   this.setState({
-  //     dateFlag: e.target.value
-  //   });
-  // };
+  request = async () => {
+    // let temp_data = []
+    let data = []
+    let time = []
+    // let data_time = {}
+    const response = await fetch('/Dashboard/date/' + Date.now());
+    const json = await response.json();
+    const x = JSON.parse(JSON.stringify(json))
+    if (x == "") {
+      return
+    }
+    x.sensorData.map(res => {
+      // console.log(res.sensor_value[0])
+      data.push(parseInt(res.sensor_value[0]))
+      time.push(new Date(res.date))
+      // date_time.push(parseInt(res.sensor_value[0]): res.Date)
+      // console.log(data)
+    })
+    return [data, time]
+    // return date_time
+  }
 
-  // request = async () => {
-  //   // let temp_data = []
-  //   let data = []
-  //   let time = []
-  //   // let data_time = {}
-  //   const response = await fetch('/Dashboard/date/' + Date.now());
-  //   const json = await response.json();
-  //   const x = JSON.parse(JSON.stringify(json))
-  //   if (x == "") {
-  //     return
-  //   }
-  //   x.sensorData.map(res => {
-  //     // console.log(res.sensor_value[0])
-  //     data.push(parseInt(res.sensor_value[0]))
-  //     time.push(new Date(res.date))
-  //     // date_time.push(parseInt(res.sensor_value[0]): res.Date)
-  //     // console.log(data)
-  //   })
-  //   return [data, time]
-  //   // return date_time
-  // }
+  componentDidMount() {
 
-
-  // componentDidMount() {
-
-  //   this.setState({ loading: 'true' })
-  //   this.request().then((record) => {
-  //     while (data_mois.length) { data_mois.pop(); }
-  //     record.forEach(data_ele => data_mois.push(data_ele))
-  //     console.log(data_mois)
-  //     this.setState({ loading: 'false' })
-  //   })
-  // }
-
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   if (this.state.loading !== nextState.loading) {
-  //     return true;
-  //   } 
-  //   if (this.state.bigChartData !== nextState.bigChartData) {
-  //     return true;
-  //   } 
-  //   if (this.state.dateFlag !== nextState.dateFlag) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
+    this.setState({ loading: 'true' })
+    this.request().then((record) => {
+      while (data_mois.length) { data_mois.pop(); }
+      record.forEach(data_ele => data_mois.push(data_ele))
+      console.log(data_mois)
+      this.setState({ loading: 'false' })
+    })
+  }
 
   render() {
-    // if (this.state.loading === 'init') {
-    //   console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
-    //   return <h2>Intializing...</h2>;
-    // }
+    if (this.state.loading === 'init') {
+      console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
+      return <h2>Intializing...</h2>;
+    }
 
 
-    // if (this.state.loading === 'true') {
-    //   console.log('This happens 5th - when waiting for data.');
-    //   return (
-    //     <>
-    //       <div className="content">
-    //         <Row>
-    //           <Col md="12">
-    //             <Card>
-    //               <CardHeader>
-    //                 <CardTitle tag="h2">Loading...</CardTitle>
-    //               </CardHeader>
-    //             </Card>
-    //           </Col>
-    //         </Row>
-    //       </div>
-    //     </>
-    //   )
+    if (this.state.loading === 'true') {
+      console.log('This happens 5th - when waiting for data.');
+      return (
+        <>
+          <div className="content">
+            <Row>
+              <Col md="12">
+                <Card>
+                  <CardHeader>
+                    <CardTitle tag="h2">Loading...</CardTitle>
+                  </CardHeader>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        </>
+      )
 
-    // }
+    }
 
     return (
 
       <>
         <div className="content">
-        <ChartByRange/>
-          {/* <Row>
+          <Row>
             <Col xs="12">
               <Card className="card-chart">
                 <CardHeader>
@@ -290,7 +250,7 @@ class Dashboard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-          </Row> */}
+          </Row>
 
 {/* OTHER CHARTS */}
           
@@ -709,11 +669,10 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row> */}
-          <ChartByDay />
         </div>
       </>
     );
   }
 }
 
-export default Dashboard;
+export default ChartByRange;
