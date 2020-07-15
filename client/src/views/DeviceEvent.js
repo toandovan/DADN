@@ -32,9 +32,8 @@ import {
 import EventForm from "../variables/EventForm"
 
 
-const humidityData = [
-  ['Speaker0', 'speaker', '10/07/2020', '10:00', '250'],
-  ['Speaker1', 'speaker', '12/07/2020', '09:00', '340'],
+const Schedule = [
+  ['Speaker', '10/07/2020', '10:00', '250'],
 ]
 class Tables extends React.Component {
   render() {
@@ -52,7 +51,6 @@ class Tables extends React.Component {
                     <thead className="text-primary">
                       <tr>
                         <th>Device_ID</th>
-                        <th>Type</th>
                         <th>Date</th>
                         <th>Time</th>
                         <th>Intensity</th>
@@ -60,18 +58,17 @@ class Tables extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {humidityData.map((row) => (
+                      {Schedule.map((row) => (
                       <tr key={row[0]}>
                         <td>{row[0]}</td>
                         <td>{row[1]}</td>
                         <td>{row[2]}</td>
                         <td>{row[3]}</td>
-                        <td>{row[4]}</td>
                         <td><Button 
                               outline 
                               size="sm" 
                               color="primary"
-                              onClick={()=> {console.log(row[2] +" "+ row[3] )}}
+                              onClick={()=> {console.log(row[1] +" "+ row[2] )}}
                             >
                             remove</Button></td>
 

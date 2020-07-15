@@ -1,7 +1,8 @@
 var express = require('express');
-const sensor= require('../models/deviceModel')
-const moistures= require('../models/moistures')
 const mongoose=require('mongoose')
+let speaker = mongoose.model('speaker')
+const moistures= require('../models/moistures')
+
 var router = express.Router();
 
 //sensor data realtime
@@ -36,16 +37,13 @@ router.get('/sensor', function(req, res, next) {
   })
 });
 
-router.get('/motor', function(req, res, next) {
-  console.log(req.params)
-  sensor.find()
-  .where('deviceType').equals('humidity')
+router.get('/speaker', function(req, res, next) {
+  // console.log(req.params)
+  speaker.find()
   .exec().then((doc)=>{
-    var x=[]
-    doc.map(r=>x.push(r.device_id))
     res.status(200).json({
       // message: 'handling get request',
-      sensorData: x
+      speakerData: doc
     })
   })
   .catch(err=>{

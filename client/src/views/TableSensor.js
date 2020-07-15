@@ -119,7 +119,7 @@ class Tables extends React.Component {
                     <tbody>
                       {
                         this.state.sensor.map((data)=>(
-                          <tr>
+                          <tr key={data._id}>
                             <td>{data._id}</td>
                             <td>{data.area}</td>
                             <td>{data.status}</td>

@@ -16,7 +16,7 @@ let model= (device_id,status,device_value)=>{
         if(err){
             console.log(err);
         }else{
-            console.log("Document Save Done");
+            console.log("Document Save Done2");
           }
         });
 }
