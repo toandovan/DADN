@@ -64,7 +64,7 @@ function Subscribe() {
         //message
         var obj = JSON.parse(message);
         console.log(obj)
-        Checkdata(obj, "Speaker", [0, 0])
+        // Checkdata(obj, "Speaker", [0, 0])
         mois.model(obj[0].device_id, "nat", 'on',obj[0].values);
     })
 

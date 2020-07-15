@@ -55,6 +55,9 @@ app.get('/api/secret', function(req, res) {
 
 app.use("/api/", authUser)
 
+let cleanAPI = require('./routes/clean_db_api')
+app.use('/clean', cleanAPI);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
