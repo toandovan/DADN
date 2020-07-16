@@ -29,6 +29,7 @@ function Publisher(id, val0, val1){
 
     clientTest.on('connect',function(){
         console.log("OK-pub-done")
+        console.log(object)
         clientTest.publish('Topic/Speaker', object);
         let obj=JSON.parse(object)
         deviceModel.model(obj[0].device_id,obj[0].values[0],obj[0].values[1]);

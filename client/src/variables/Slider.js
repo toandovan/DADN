@@ -10,32 +10,43 @@ import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
 import SignalCellular4BarIcon from '@material-ui/icons/SignalCellular4Bar';
 import axios from 'axios';
 
-function ChooseIcon(props){
+function ChooseIcon(props) {
   // eslint-disable-next-line
-    if(props.input == 100){return (<SignalCellular4BarIcon />)}
-    else if(props.input >= 75){return (<SignalCellular3BarIcon />)}
-    else if(props.input >= 50){return (<SignalCellular2BarIcon />)}
-    else if(props.input >= 25){return (<SignalCellular1BarIcon />)}
-    else {return (<SignalCellular0BarIcon />)}
+  if (props.input == 100) { return (<SignalCellular4BarIcon />) }
+  else if (props.input >= 75) { return (<SignalCellular3BarIcon />) }
+  else if (props.input >= 50) { return (<SignalCellular2BarIcon />) }
+  else if (props.input >= 25) { return (<SignalCellular1BarIcon />) }
+  else { return (<SignalCellular0BarIcon />) }
 }
 
 const useStyles = makeStyles({
   root: {
     width: 250,
   },
-  input: {
-    width: 42,
+  number: {
+    "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
+      "-webkit-appearance": "none",
+      margin: 0
+    }
   },
+  input: {
+    "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+      "-webkit-appearance": "none",
+      margin: 0
+    },
+    color: '#1F8EF1',
+    width: 42,
+  }
 });
 
 
-function ChangeSpeakerReq(array){
+function ChangeSpeakerReq(array) {
   axios.post(`/Dashboard/sensorData`, { array })
-      // .then(res => {
-      //   console.log(res);
-      //   console.log(res.data);
-      // })
-    }
+  // .then(res => {
+  //   console.log(res);
+  //   console.log(res.data);
+  // })
+}
 // async function ChangeSpeakerReq(array){
 //   const x = await fetch('/Dashboard/sensorData/' + Date.now())
 // }
@@ -64,28 +75,30 @@ export default function InputSlider(props) {
     console.log("after mouse up, value after mouse up ")
     console.log(newValue)
     // eslint-disable-next-line
-    let array_json = (newValue == 0) 
-                            ? 
-                            [{ "device_id": props.idDevice, 
-                                "values": ["0", "0"]
-                            }] 
-                            : 
-                            [{ "device_id": props.idDevice, 
-                                "values": ["1", newValue.toString()]
-                            }];
+    let array_json = (newValue == 0)
+      ?
+      [{
+        "device_id": props.idDevice,
+        "values": ["0", "0"]
+      }]
+      :
+      [{
+        "device_id": props.idDevice,
+        "values": ["1", newValue.toString()]
+      }];
 
     // console.log(array_json)
     ChangeSpeakerReq(array_json)
   }
 
   return (
-    <div className={classes.root} style={{margin: "0 auto 0 auto"}}>
+    <div className={classes.root} style={{ margin: "0 auto 0 auto" }}>
       {/* <Typography id="input-slider" gutterBottom>
         AssessmentIcon
       </Typography> */}
       <Grid container spacing={2} alignItems="center">
         <Grid item>
-          <ChooseIcon input={value}/>
+          <ChooseIcon input={value} />
         </Grid>
         <Grid item xs>
           <Slider
@@ -94,9 +107,17 @@ export default function InputSlider(props) {
             onChangeCommitted={handleSliderToSave}
             aria-labelledby="input-slider"
             valueLabelDisplay="auto"
+            className={classes.number}
+            // InputProps={{
+            //   className: classes.input,
+            // }}
+            // InputLabelProps={{
+            //   className: classes.input,
+            //   shrink: true,
+            // }}
           />
         </Grid>
-        <Grid item >
+        {/* <Grid item >
           <Input
             className={classes.input}
             value={value}
@@ -112,7 +133,7 @@ export default function InputSlider(props) {
               'aria-labelledby': 'input-slider',
             }}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

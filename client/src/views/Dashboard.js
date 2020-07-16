@@ -22,6 +22,10 @@ import classNames from "classnames";
 import { Line, Bar } from "react-chartjs-2";
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
 
 // reactstrap components
 import {
@@ -76,15 +80,16 @@ let textStyles = makeStyles({
     },
   }
 );
+
+
+
 class Dashboard extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     bigChartData: "data1",
-  //     loading: 'init',
-  //     dateFlag: ''
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      sensorSelected: undefined
+    };
+  }
   // setBgChartData = name => {
   //   this.setState({
   //     bigChartData: name
@@ -93,20 +98,19 @@ class Dashboard extends React.Component {
   //   // console.log(this.state.bigChartData)
   // };
 
-  // handleDateChange = (e) => {
-  //   console.log(e.target.value)
-  //   localStorage.setItem("dateSelected", e.target.value)
-  //   this.setState({
-  //     dateFlag: e.target.value
-  //   });
-  // };
+  handleSensorSelect = (e) => {
+    console.log(e.target.value)
+    this.setState({
+      sensorSelected: e.target.value
+    });
+  };
 
   // request = async () => {
   //   // let temp_data = []
   //   let data = []
   //   let time = []
   //   // let data_time = {}
-  //   const response = await fetch('/Dashboard/date/' + Date.now());
+  //   const response = await fetch('/Dashboard/type/' + Date.now());
   //   const json = await response.json();
   //   const x = JSON.parse(JSON.stringify(json))
   //   if (x == "") {
@@ -180,7 +184,33 @@ class Dashboard extends React.Component {
 
       <>
         <div className="content">
-        <ChartByRange/>
+        <FormControl style={{width: "150px"}}>
+       <InputLabel 
+       id="demo-controlled-open-select-label"
+       style={{color: "#1F8EF1"}}
+       >Choose Sensor</InputLabel>
+        <Select
+           style={{color: "#1F8EF1"}}
+          labelId="demo-controlled-open-select-label"
+          id="demo-controlled-open-select"
+          // open={open}
+          // onClose={handleClose}
+          // onOpen={handleOpen}
+          value={this.state.sensorSelected || ''}
+          onChange={(e)=>{this.handleSensorSelect(e)}}
+        >
+          {/* {deviceList.map((d) => (
+            <MenuItem key={d} value={d}>{d}</MenuItem>
+          ))} */}
+          <MenuItem value={'Mois'}>Mois</MenuItem>
+        </Select>
+
+       </FormControl>
+
+      <br />
+      <br />
+      <br />
+        <ChartByRange sensor= {this.state.sensorSelected}/>
           {/* <Row>
             <Col xs="12">
               <Card className="card-chart">
@@ -709,7 +739,7 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row> */}
-          <ChartByDay />
+          <ChartByDay sensor= {this.state.sensorSelected} />
         </div>
       </>
     );

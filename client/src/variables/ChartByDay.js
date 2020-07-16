@@ -90,12 +90,12 @@ class ChartByDay extends React.Component {
     });
   };
 
-  request = async () => {
+  request = async (type) => {
     // let temp_data = []
     let data = []
     let time = []
     // let data_time = {}
-    const response = await fetch('/Dashboard/date/' + Date.now());
+    const response = await fetch('/Dashboard/type/' + type);
     const json = await response.json();
     const x = JSON.parse(JSON.stringify(json))
     if (x == "") {
@@ -113,15 +113,33 @@ class ChartByDay extends React.Component {
   }
 
 
+  componentDidUpdate(prevProps) {
+
+    //You must have an if check, or loop forever
+    if(this.props.sensor !== prevProps.sensor){
+       //do something like make an API call
+       //perhaps set this on state for display
+       if(this.props.sensor != undefined){
+        this.request(this.props.sensor).then((record) => {
+          while (data_moisChart2.length) { data_moisChart2.pop(); }
+          record.forEach(data_ele => data_moisChart2.push(data_ele))
+          console.log(data_moisChart2)
+          this.setState({ loading: 'false' })
+        })
+      }
+    }
+  }
+
   componentDidMount() {
 
     this.setState({ loading: 'true' })
-    this.request().then((record) => {
-      while (data_moisChart2.length) { data_moisChart2.pop(); }
-      record.forEach(data_ele => data_moisChart2.push(data_ele))
-      console.log(data_moisChart2)
-      this.setState({ loading: 'false' })
-    })
+    localStorage.setItem("dateSelected", ' ')
+    // this.request().then((record) => {
+    //   while (data_moisChart2.length) { data_moisChart2.pop(); }
+    //   record.forEach(data_ele => data_moisChart2.push(data_ele))
+    //   console.log(data_moisChart2)
+    //   this.setState({ loading: 'false' })
+    // })
   }
 
   render() {

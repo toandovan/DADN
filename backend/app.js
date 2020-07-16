@@ -74,7 +74,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-Subscriber.Subscribe()
+// Subscriber.Subscribe()
 
 
 // const server = require('http').Server(app);

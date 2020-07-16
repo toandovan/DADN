@@ -77,12 +77,12 @@ class ChartByRange extends React.Component {
     // console.log(this.state.bigChartData)
   };
 
-  request = async () => {
+  request = async (type) => {
     // let temp_data = []
     let data = []
     let time = []
     // let data_time = {}
-    const response = await fetch('/Dashboard/date/' + Date.now());
+    const response = await fetch('/Dashboard/type/' + type);
     const json = await response.json();
     const x = JSON.parse(JSON.stringify(json))
     if (x == "") {
@@ -98,16 +98,35 @@ class ChartByRange extends React.Component {
     return [data, time]
     // return date_time
   }
+  componentDidUpdate(prevProps) {
+
+    //You must have an if check, or loop forever
+    if(this.props.sensor !== prevProps.sensor){
+       //do something like make an API call
+       //perhaps set this on state for display
+       if(this.props.sensor != undefined){
+        this.request(this.props.sensor).then((record) => {
+          while (data_mois.length) { data_mois.pop(); }
+          record.forEach(data_ele => data_mois.push(data_ele))
+          console.log(data_mois)
+          this.setState({ loading: 'false' })
+        })
+      }
+    }
+  }
 
   componentDidMount() {
 
     this.setState({ loading: 'true' })
-    this.request().then((record) => {
-      while (data_mois.length) { data_mois.pop(); }
-      record.forEach(data_ele => data_mois.push(data_ele))
-      console.log(data_mois)
-      this.setState({ loading: 'false' })
-    })
+    console.log(this.props.sensor)
+  //   if(this.props.sensor != undefined){
+  //   this.request().then((record) => {
+  //     while (data_mois.length) { data_mois.pop(); }
+  //     record.forEach(data_ele => data_mois.push(data_ele))
+  //     console.log(data_mois)
+  //     this.setState({ loading: 'false' })
+  //   })
+  // }
   }
 
   render() {
@@ -147,8 +166,8 @@ class ChartByRange extends React.Component {
                 <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
-                      <h5 className="card-category">Area 01</h5>
-                      <CardTitle tag="h2">Mois - Humidity</CardTitle>
+                      <h5 className="card-category">Sensor</h5>
+                      <CardTitle tag="h2">{this.props.sensor}</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup

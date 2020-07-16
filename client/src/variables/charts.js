@@ -95,8 +95,8 @@ function CheckDayCond(db_day, anotherDay) {
   let dateConvert = (new Date(dayhihi)).toDateString()
   // let dayhihi = anotherDay.split('-');
   // let dateConvert = parseInt(dayhihi[2]).toString() + '/' + parseInt(dayhihi[1]).toString() +'/'+parseInt(dayhihi[0]).toString()
-  console.log(db_day2)
-  console.log(db_day2 === dateConvert)
+  // console.log(db_day2)
+  // console.log(db_day2 === dateConvert)
   if (db_day2 === dateConvert) {
     return true
   }
