@@ -4,29 +4,38 @@ const express = require('express')
 var router = express.Router();
 const jwt = require('jsonwebtoken')
 const ACCESS_TOKEN_SECRET = "123"
-const REFRESH_TOKEN_SECRET = "aaa"
+const REFRESH_TOKEN_SECRET = "aaa";
+const mongoose = require('mongoose');
+let userModel = require('../models/UserModel');
+const bcrypt = require('bcrypt');
 
 // app.use(express.json())
 
 let refreshTokens = []
 
 // get the data from the database
-const posts = [
-    {
-        username: 'Kyle',
-        password: '1234',
-        title: 'Post 1'
-    },
-    {
-        username: 'Jim',
-        password: '1235',
-        title: 'Post 2'
-    }
-]
+
+// const posts = [
+//     {
+//         username: 'Kyle',
+//         password: '1234',
+//         title: 'Post 1'
+//     },
+//     {
+//         username: 'Jim',
+//         password: '1235',
+//         title: 'Post 2'
+//     }
+// ]
+
+var posts = [];
+
+
+
 // tesing authentication
 router.get('/posts', authenticateToken, (req, res) => {
-    console.log(req.user.name)
-    res.json(posts.filter(post => post.username === req.user.name && post.password === req.user.pass))
+    console.log(req.user.email)
+    res.json(posts.filter(post => post.email === req.user.email && post.password === req.user.pass))
 })
 
 function authenticateToken(req, res, next) {
@@ -49,7 +58,7 @@ router.post('/token', (req, res) => {
     if (!refreshTokens.includes(refreshToken)) return res.sendStatus(403)
     jwt.verify(refreshToken, REFRESH_TOKEN_SECRET, (err, user) => {
         if (err) return res.sendStatus(403)
-        const accessToken = generateAccessToken({ name: user.name })
+        const accessToken = generateAccessToken({ email: user.email })
         res.json({ accessToken: accessToken })
     })
 })
@@ -72,27 +81,74 @@ function generateAccessToken(user) {
 router.post('/login', (req, res) => {
     // Authenticate User
 
-    const username = req.body.username
+    const email = req.body.email
     const password = req.body.password
-    console.log(username + " " + password);
+    console.log(email + " " + password);
 
-    let User = posts.filter(post => post.username === username && post.password === password)
+    let User = posts.filter(post => post.email === email)
     console.log(User);
 
     if (User.length == 0) { res.json({ valid: 0 }) }
     else {
-        // console.log(username)
-        const user = { name: username, pass: password }
+        // let flag = true
+        console.log(User[0].password)
+        bcrypt.compare(password, User[0].password, function (err, isMatch) {
+            if (isMatch) {
+                console.log("is match");
+                // console.log(username)
+                const user = { email: email, pass: password }
 
-        const accessToken = generateAccessToken(user)
-        // console.log(accessToken)
-        const refreshToken = jwt.sign(user, REFRESH_TOKEN_SECRET)
-        // console.log(refreshToken)
-        refreshTokens.push(refreshToken)
-        res.json({ valid: 1, accessToken: accessToken, refreshToken: refreshToken })
+                const accessToken = generateAccessToken(user)
+                // console.log(accessToken)
+                const refreshToken = jwt.sign(user, REFRESH_TOKEN_SECRET)
+                // console.log(refreshToken)
+                refreshTokens.push(refreshToken)
+                res.json({ valid: 1, accessToken: accessToken, refreshToken: refreshToken })
+            }
+            else {
+                console.log("not match");
+                res.json({ valid: 0 })
+            }
+        })
+
     }
 })
 
+router.post('/signup', (req, res) => {
+    const email = req.body.email
+    const password = req.body.password
 
+    bcrypt.hash(password, 10, function (err, hash) {
+
+        var userInstance = new userModel(
+            {
+                email: email,
+                password: hash,
+            }
+        )
+        userInstance.save(function (err, alex) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("New User Has Been Created");
+                res.send("OK");
+            }
+        });
+    });
+})
+
+
+router.post('/prepare', (req, res) => {
+    userModel.find().exec()
+        .then(doc => {
+            posts = doc;
+            console.log("posts = " + posts);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+    res.status(200).send("OK");
+})
 
 module.exports = router;

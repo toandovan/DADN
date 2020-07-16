@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,8 +15,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import AuthApi from "../variables/AuthApi"
+import AuthApi from '../variables/AuthApi';
 // import { userPostFetch } from '../redux/action';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 // import {connect} from 'react-redux';
 // function Copyright() {
@@ -53,16 +54,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn(props) {
-//   const mapDispatchToProps = dispatch => ({
-//     userPostFetch: userInfo => dispatch(userPostFetch(userInfo))
-//   })
-
+  // const mapDispatchToProps = dispatch => ({
+  //   userPostFetch: userInfo => dispatch(userPostFetch(userInfo))
+  // })
+  var history = useHistory();
   const classes = useStyles();
 
   const authApi = React.useContext(AuthApi)
   const signInHandle = () => {
     authApi.setAuth(false)
   }
+
+  useEffect(() => {
+    axios.post('api/prepare').then(res => {
+      console.log(res)
+    });
+  }, [])
+    
 
   let [username, setUsername] = useState('')
   let [password, setPassword] = useState('')
@@ -74,7 +82,7 @@ export default function SignIn(props) {
   // }
 
   var handleSubmit = event => {
-    axios.post('/api/login', { username: username, password: password })
+    axios.post('/api/login', { email: username, password: password })
       .then(res => {
         // console.log(res.)
         if (res.data.valid == 0) {
@@ -86,7 +94,12 @@ export default function SignIn(props) {
         else {
           console.log("correct");
           console.log(res.data);
-          authApi.setAuth(true);
+          localStorage.setItem('auth', "true");
+          console.log(localStorage.getItem("auth"));
+          // authApi.setAuth(true);
+          history.push({pathname: '/admin/dashboard'});
+          // window.location.assign('/admin/dashboard');
+          console.log("go")
         }
       })
   }
@@ -98,7 +111,7 @@ export default function SignIn(props) {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5" style={{color: "black"}}>
+        <Typography component="h1" variant="h5" style={{ color: 'black' }}>
           Sign in
         </Typography>
         <form className={classes.form} noValidate>
@@ -148,7 +161,7 @@ export default function SignIn(props) {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
