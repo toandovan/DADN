@@ -90,9 +90,12 @@ function CheckDay(db_day) {
 }
 
 function CheckDayCond(db_day, anotherDay) {
-  let db_day2 = (new Date(db_day)).toLocaleDateString()
-  let dayhihi = anotherDay.split('-');
-  let dateConvert = parseInt(dayhihi[2]).toString() + '/' + parseInt(dayhihi[1]).toString() +'/'+parseInt(dayhihi[0]).toString()
+  let db_day2 = (new Date(db_day)).toDateString()
+  let dayhihi = new Date(anotherDay).getTime()
+  let dateConvert = (new Date(dayhihi)).toDateString()
+  // let dayhihi = anotherDay.split('-');
+  // let dateConvert = parseInt(dayhihi[2]).toString() + '/' + parseInt(dayhihi[1]).toString() +'/'+parseInt(dayhihi[0]).toString()
+  console.log(db_day2)
   console.log(db_day2 === dateConvert)
   if (db_day2 === dateConvert) {
     return true

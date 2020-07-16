@@ -29,6 +29,7 @@ import {
 } from "reactstrap";
 
 import InputSlider from "../variables/Slider"
+import LimitForm from "../variables/LimitForm"
 
 
 const Device = [
@@ -45,8 +46,8 @@ class Tables extends React.Component {
   requestDevice = async () => {
     const response = await fetch('/device/speaker');
     const json = await response.json();
-    const x=JSON.parse(JSON.stringify(json))
-    if (x==""){
+    const x = JSON.parse(JSON.stringify(json))
+    if (x == "") {
       return
     }
     // x.sensorData.map(res=>{
@@ -55,15 +56,15 @@ class Tables extends React.Component {
     // })
     return x.speakerData
   }
-  componentDidMount(){
+  componentDidMount() {
     this.setState({ loading: 'true' })
-    this.requestDevice().then((doc)=>{
-      this.setState({ 
+    this.requestDevice().then((doc) => {
+      this.setState({
         loading: 'false',
         data: doc
       })
     }
-    ) 
+    )
   }
   render() {
     if (this.state.loading === 'init') {
@@ -74,54 +75,70 @@ class Tables extends React.Component {
 
     if (this.state.loading === 'true') {
       console.log('This happens 5th - when waiting for data.');
-      return(
+      return (
         <>
-        <div className="content">
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h2">Loading...</CardTitle>
-                </CardHeader>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
+          <div className="content">
+            <Row>
+              <Col md="12">
+                <Card>
+                  <CardHeader>
+                    <CardTitle tag="h2">Loading...</CardTitle>
+                  </CardHeader>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        </>
       )
 
     }
     return (
       <>
         <div className="content">
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h4">Simple Table</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Table className="tablesorter" responsive>
-                    <thead className="text-primary">
-                      <tr>
-                        <th>Device_ID</th>
-                        <th className="text-center">Controller</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {this.state.data.map((row) => (
-                      <tr key={row.device_id}>
-                        <td>{row.device_id}</td>
-                        <td><InputSlider idDevice={row.deviceValue} /></td>
-                      </tr>
-                      ))}
-                      
-                    </tbody>
-                  </Table>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+        <Row>
+              <Col md="12">
+                <Card>
+                  <CardHeader>
+                    <CardTitle tag="h4">Limits & Automation</CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <LimitForm />
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+        
+        <br/>
+        <br/>
+        <br/>
+            <Row>
+              <Col md="12">
+                <Card>
+                  <CardHeader>
+                    <CardTitle tag="h4">Device Table</CardTitle>
+                  </CardHeader>
+                  <CardBody>
+                    <Table className="tablesorter" responsive>
+                      <thead className="text-primary">
+                        <tr>
+                          <th>Device_ID</th>
+                          <th className="text-center">Controller</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {this.state.data.map((row) => (
+                          <tr key={row.device_id}>
+                            <td>{row.device_id}</td>
+                            <td><InputSlider idDevice={row.deviceValue} /></td>
+                          </tr>
+                        ))}
+
+                      </tbody>
+                    </Table>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
         </div>
       </>
     );

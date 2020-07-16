@@ -103,8 +103,8 @@ class Tables extends React.Component {
             <Col md="12">
               <Card className="card-plain">
                 <CardHeader>
-                  <CardTitle tag="h4">Table on Plain Background</CardTitle>
-                  <p className="category">Here is a subtitle for this table</p>
+                  <CardTitle tag="h4">Table Sensor</CardTitle>
+                  <p className="category">Here is the values</p>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
