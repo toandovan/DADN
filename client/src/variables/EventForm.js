@@ -84,11 +84,15 @@ export default function EventForm(props) {
 
   function HandleEventClick(){
     // console.log(Date +' ' + Duration +' '+Intensity + ' '+Device)
+    // eslint-disable-next-line
     if((Date != undefined) && (Duration != undefined) && (Intensity != undefined) && (Device != undefined)){
-      axios.post(`/event`, {Date,Duration,Intensity,Device})
+      axios.post(`/event`, {Date,Duration,Intensity,Device}).then((res)=>{
+        props.rerenderParentCallback()
+      })
+      
       // console.log("hihi dung roi")
     }
-    props.rerenderParentCallback()
+  
     // else{
     //   console.log("hihi sai roi")
     // }

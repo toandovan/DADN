@@ -47,8 +47,10 @@ class Tables extends React.Component {
   }
 
   rerenderParentCallback = async () => {
-    let temp = []
+    console.log("beforequeryCall")
     await this.ScheduleQuery().then(record => {
+      let temp = []
+      console.log("afterqueryCall")
       console.log(record)
       record.forEach(event => {
         temp.push([event.device_id, event.date, event.duration, event.intensity, event._id])
@@ -58,6 +60,8 @@ class Tables extends React.Component {
         reloadFlag: (!this.state.reloadFlag)
 
       })
+    console.log("whereAmI")
+
     });
 
     // this.forceUpdate();
@@ -67,7 +71,7 @@ class Tables extends React.Component {
     Axios.post('/event/delete', { device_id, date, duration, intensity })
   }
   ScheduleQuery = async () => {
-    // let data_time = {}
+    console.log("queryCall")
     // const response = await fetch('/event/all');
     const response = await Axios.post('/event/all');
     const json = await response.data;
@@ -75,11 +79,11 @@ class Tables extends React.Component {
     if (x == "") {
       return
     }
-    console.log(x)
+    // console.log(x)
     return x
-    // return date_time
   }
   componentDidMount() {
+    console.log("call this hihi")
     this.ScheduleQuery().then(record => {
       console.log(record)
       let temp = []

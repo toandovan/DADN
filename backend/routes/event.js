@@ -10,6 +10,7 @@ router.post('/', (req, res)=>{
     let deviceId=req.body.Device
     let intensity=req.body.Intensity
     event.model(deviceId,date,duration,intensity)
+    res.send("ok")
     console.log(date)
     var j = schedule.scheduleJob(date, function(){
         //check schedule
