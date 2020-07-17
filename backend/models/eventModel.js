@@ -22,6 +22,28 @@ let deleteModel=(device_id, date, duration, intensity)=>{
             }
             });
 }
+let findModel=(device_id, date, duration, intensity)=>{
+    event.findOne({
+        device_id:device_id,
+        date: date,
+        duration: duration,
+        intensity: intensity
+    })
+    .exec()
+    .then((res)=>{
+        if(!res){
+            return false
+        }
+        return true
+    });
+}
+let findAllModel=(res)=>{
+     event.find({})
+    .exec()
+    .then((doc)=>{
+        res.json(doc)
+    })
+}
 let model= (device_id, date, duration, intensity)=>{
     let eventRecord=new event(
         {
@@ -38,9 +60,9 @@ let model= (device_id, date, duration, intensity)=>{
             console.log("Event Save Done");
           }
         });
-    
 }
+
 module.exports={
-    event,deleteModel,
+    event,deleteModel,findModel,findAllModel,
     model
 };

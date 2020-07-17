@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function EventForm() {
+export default function EventForm(props) {
   let [Intensity,SetIntensity] = React.useState(undefined)
   let [Date,setDate] = React.useState(undefined)
   let [Duration,setDuration] = React.useState(undefined)
@@ -88,6 +88,7 @@ export default function EventForm() {
       axios.post(`/event`, {Date,Duration,Intensity,Device})
       // console.log("hihi dung roi")
     }
+    props.rerenderParentCallback()
     // else{
     //   console.log("hihi sai roi")
     // }

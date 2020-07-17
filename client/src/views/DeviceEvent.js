@@ -30,12 +30,69 @@ import {
 } from "reactstrap";
 
 import EventForm from "../variables/EventForm"
+import Axios from "axios"
 
 
-const Schedule = [
-  ['Speaker', '10/07/2020', '10:00', '250'],
-]
+// const Schedule = [
+//   ['Speaker', '10/07/2020', '10:00', '250'],
+// ]
 class Tables extends React.Component {
+  constructor(props) {
+    super(props);
+    this.rerenderParentCallback = this.rerenderParentCallback.bind(this);
+    this.state = {
+      Schedule: [],
+      reloadFlag: true
+    }
+  }
+
+  rerenderParentCallback = async () => {
+    let temp = []
+    await this.ScheduleQuery().then(record => {
+      console.log(record)
+      record.forEach(event => {
+        temp.push([event.device_id, event.date, event.duration, event.intensity, event._id])
+      })
+      this.setState({
+        Schedule: temp,
+        reloadFlag: (!this.state.reloadFlag)
+
+      })
+    });
+
+    // this.forceUpdate();
+  }
+
+  ScheduleDelete = (device_id, date, duration, intensity) => {
+    Axios.post('/event/delete', { device_id, date, duration, intensity })
+  }
+  ScheduleQuery = async () => {
+    // let data_time = {}
+    // const response = await fetch('/event/all');
+    const response = await Axios.post('/event/all');
+    const json = await response.data;
+    const x = JSON.parse(JSON.stringify(json));
+    if (x == "") {
+      return
+    }
+    console.log(x)
+    return x
+    // return date_time
+  }
+  componentDidMount() {
+    this.ScheduleQuery().then(record => {
+      console.log(record)
+      let temp = []
+      if (record) {
+        record.forEach(event => {
+          temp.push([event.device_id, event.date, event.duration, event.intensity, event._id])
+        })
+        this.setState({
+          Schedule: temp
+        })
+      }
+    });
+  }
   render() {
     return (
       <>
@@ -58,28 +115,28 @@ class Tables extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {Schedule.map((row) => (
-                      <tr key={row[0]}>
-                        <td>{row[0]}</td>
-                        <td>{row[1]}</td>
-                        <td>{row[2]}</td>
-                        <td>{row[3]}</td>
-                        <td><Button 
-                              outline 
-                              size="sm" 
-                              color="primary"
-                              onClick={()=> {console.log(row[1] +" "+ row[2] )}}
-                            >
+                      {this.state.Schedule.map((row) => (
+                        <tr key={row[4]}>
+                          <td>{row[0]}</td>
+                          <td>{row[1]}</td>
+                          <td>{row[2]}</td>
+                          <td>{row[3]}</td>
+                          <td><Button
+                            outline
+                            size="sm"
+                            color="primary"
+                            onClick={() => { console.log(row[1] + " " + row[2]) }}
+                          >
                             remove</Button></td>
 
-                      </tr>
+                        </tr>
                       ))}
-                      
+
                     </tbody>
                   </Table>
                 </CardBody>
               </Card>
-              <EventForm />
+              <EventForm rerenderParentCallback={this.rerenderParentCallback} />
             </Col>
           </Row>
         </div>

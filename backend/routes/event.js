@@ -12,19 +12,27 @@ router.post('/', (req, res)=>{
     event.model(deviceId,date,duration,intensity)
     console.log(date)
     var j = schedule.scheduleJob(date, function(){
-        console.log('hello world.');
-        if(intensity>0){
-            publisher.Publisher(deviceId,1,intensity);
+        //check schedule
+        //true
+        if(event.findModel(deviceId,date,duration,intensity)){
+            console.log('hello world.');
+            if(intensity>0){
+                publisher.Publisher(deviceId,1,intensity);
+            }
+            else{
+                publisher.Publisher(deviceId,0,0);
+            }
         }
-        else{
-            publisher.Publisher(deviceId,0,0);
-        }
+        //false
     });
     let dateOff=new Date(date).getTime();
     let dateNew= new Date(dateOff+duration*60*1000);
     var x = schedule.scheduleJob(dateNew, function(){
-        console.log('hello world.');
-        publisher.Publisher(deviceId,0,0);
+        if (event.findModel(deviceId,date,duration,intensity)){
+            console.log('hello world.');
+            publisher.Publisher(deviceId,0,0);
+            event.deleteModel(deviceId,date,duration,intensity)
+        }
     });
     res.send("SET EVENT OK");
 })
@@ -34,5 +42,11 @@ router.post('/delete',(req,res)=>{
     let deviceId=req.body.Device
     let intensity=req.body.Intensity
     event.deleteModel(deviceId,date,duration,intensity)
+})
+router.post('/all',(req,res)=>{
+    console.log("in")
+    event.findAllModel(res);
+    // console.log(event.findAllModel())
+    // res.send(event.findAllModel())
 })
 module.exports = router;
