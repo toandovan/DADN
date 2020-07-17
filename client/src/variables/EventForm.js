@@ -53,7 +53,7 @@ export default function EventForm() {
   let [Intensity,SetIntensity] = React.useState(undefined)
   let [Date,setDate] = React.useState(undefined)
   let [Duration,setDuration] = React.useState(undefined)
-  let [Device, setDevice] = React.useState('');
+  let [Device, setDevice] = React.useState(undefined);
   let [open, setOpen] = React.useState(false);
 
   let deviceList = ["Speaker"]
@@ -83,8 +83,14 @@ export default function EventForm() {
   };
 
   function HandleEventClick(){
-    console.log(Date +' ' + Duration +' '+Intensity + ' '+Device)
-    // axios.post(`/DeviceSchedule`, {[Date,Duration,Intensity]})
+    // console.log(Date +' ' + Duration +' '+Intensity + ' '+Device)
+    if((Date != undefined) && (Duration != undefined) && (Intensity != undefined) && (Device != undefined)){
+      axios.post(`/event`, {Date,Duration,Intensity,Device})
+      // console.log("hihi dung roi")
+    }
+    // else{
+    //   console.log("hihi sai roi")
+    // }
   }
 
 
@@ -158,7 +164,7 @@ export default function EventForm() {
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={Device}
+          value={Device || ''}
           onChange={(e)=>{handleDeviceChange(e)}}
         >
           {deviceList.map((d) => (
@@ -170,9 +176,6 @@ export default function EventForm() {
         </Select>
 
        </FormControl>
-      
-
-
       <Button 
         outline 
         size="sm" 
