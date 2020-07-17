@@ -26,7 +26,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var deviceRouter = require('./routes/deviceList');
 let sendSensorData = require('./routes/sendSensorData')
-let authUser = require('./routes/authServer')
+let authServer = require('./routes/authServer')
 
 var app = express();
 
@@ -53,7 +53,7 @@ app.get('/api/secret', function(req, res) {
   res.send('The password is potato');
 });
 
-app.use("/api/", authUser)
+app.use("/api/", authServer)
 
 let cleanAPI = require('./routes/clean_db_api')
 app.use('/clean', cleanAPI);
@@ -80,7 +80,9 @@ app.use(function(err, req, res, next) {
 // const server = require('http').Server(app);
 // const io = require('socket.io')(server);
 socket.realTime(app)
-// sendEmail.sendEmail()
+// sendEmail.sendEmail2()
+// sendEmail.sendEmail("hihi")
+// setTimeout((()=>{sendEmail.sendEmail("haha")}),10000)
 // sendEmail.Test()
 
 

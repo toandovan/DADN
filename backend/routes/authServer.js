@@ -8,6 +8,7 @@ const REFRESH_TOKEN_SECRET = "aaa";
 const mongoose = require('mongoose');
 let userModel = require('../models/UserModel');
 const bcrypt = require('bcrypt');
+const sendEmail = require('../components/sendEmail')
 
 // app.use(express.json())
 
@@ -132,9 +133,12 @@ router.post('/signup', (req, res) => {
             } else {
                 console.log("New User Has Been Created");
                 res.send("OK");
+                sendEmail.sendEmail(email)
             }
         });
     });
+
+
 })
 
 
