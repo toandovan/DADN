@@ -93,11 +93,12 @@ let [Intensity,SetIntensity] = React.useState(undefined)
 //   };
 
   function HandleApplyClick(){
-    console.log(Lower)
-    console.log(Intensity)
-    console.log(Upper)
-
-    // axios.post(`/DeviceSchedule`, {[Date,Duration,Intensity]})
+    // console.log(Lower)
+    // console.log(Intensity)
+    // console.log(Upper)
+    let autoValue = [[Lower,Intensity],[Upper,"0"]]
+    console.log("in ChangeSensorLimit")
+    axios.post(`/device/autoDevice`, { autoValue })
   }
 
 
