@@ -1,0 +1,527 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/ansi/DADN
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git check-ignore -v -z --stdin
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse bug_ne_hihi
+> git rev-parse --symbolic-full-name bug_ne_hihi@{u}
+> git rev-list --left-right bug_ne_hihi...refs/remotes/origin/bug_ne_hihi
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/ansi/DADN/.git/refs/remotes/origin/bug_ne_hihi', is most likely packed.
+> git config --get commit.template
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/routes/event.js
+> git ls-files --stage -- /home/ansi/DADN/backend/routes/event.js
+> git cat-file -s 234f765e875462dfd91f05290235a5d65ecec0c7
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd
+> git show --textconv :backend/models/eventModel.js
+> git ls-files --stage -- /home/ansi/DADN/backend/models/eventModel.js
+> git cat-file -s 0add46eb51ffbe86613dc27ccb972cd2ea953161
+> git show --textconv :client/src/views/DeviceEvent.js
+> git ls-files --stage -- /home/ansi/DADN/client/src/views/DeviceEvent.js
+> git cat-file -s 47d7a25ee4619a6c0392c1731e78de0775ba83dd

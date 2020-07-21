@@ -88,6 +88,7 @@ export default function EventForm(props) {
     if((Date != undefined) && (Duration != undefined) && (Intensity != undefined) && (Device != undefined)){
       axios.post(`/event`, {Date,Duration,Intensity,Device}).then((res)=>{
         props.rerenderParentCallback()
+        console.log(res)
       })
       
       // console.log("hihi dung roi")
