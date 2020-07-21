@@ -108,6 +108,7 @@ export default function InputSlider(props) {
             aria-labelledby="input-slider"
             valueLabelDisplay="auto"
             className={classes.number}
+            max={5000}
             // InputProps={{
             //   className: classes.input,
             // }}
