@@ -1,0 +1,88 @@
+[2020-07-20 23:16:58.599] [exthost] [info] extension host started
+[2020-07-20 23:16:58.730] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-07-20 23:16:58.731] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-07-20 23:16:58.755] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-07-20 23:16:58.755] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-07-20 23:16:58.856] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-20 23:16:58.856] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/git/dist/main
+[2020-07-20 23:16:59.088] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-07-20 23:16:59.088] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-07-20 23:16:59.135] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-07-20 23:16:59.135] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2020-07-20 23:16:59.147] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":true,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"*"}
+[2020-07-20 23:16:59.147] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2020-07-20 23:16:59.186] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-07-20 23:16:59.187] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-07-20 23:16:59.194] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"extensionId":{"value":"christian-kohler.path-intellisense","_lower":"christian-kohler.path-intellisense"},"activationEvent":"*"}
+[2020-07-20 23:16:59.194] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.1/out/extension.js
+[2020-07-20 23:16:59.249] [exthost] [info] ExtensionService#_doActivateExtension donjayamanne.githistory {"startup":true,"extensionId":{"value":"donjayamanne.githistory","_lower":"donjayamanne.githistory"},"activationEvent":"*"}
+[2020-07-20 23:16:59.249] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/donjayamanne.githistory-0.6.8/dist/src/extension
+[2020-07-20 23:16:59.380] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-07-20 23:16:59.381] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/eamodio.gitlens-10.2.2/dist/extension
+[2020-07-20 23:16:59.530] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2020-07-20 23:16:59.530] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/editorconfig.editorconfig-0.15.1/out/editorConfigMain.js
+[2020-07-20 23:16:59.593] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"extensionId":{"value":"formulahendry.auto-close-tag","_lower":"formulahendry.auto-close-tag"},"activationEvent":"*"}
+[2020-07-20 23:16:59.593] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/formulahendry.auto-close-tag-0.5.8/out/src/extension
+[2020-07-20 23:16:59.597] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.gitignore {"startup":true,"extensionId":{"value":"michelemelluso.gitignore","_lower":"michelemelluso.gitignore"},"activationEvent":"*"}
+[2020-07-20 23:16:59.597] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/michelemelluso.gitignore-1.0.1/out/src/extension
+[2020-07-20 23:16:59.599] [exthost] [info] ExtensionService#_doActivateExtension shardulm94.trailing-spaces {"startup":true,"extensionId":{"value":"shardulm94.trailing-spaces","_lower":"shardulm94.trailing-spaces"},"activationEvent":"*"}
+[2020-07-20 23:16:59.600] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/shardulm94.trailing-spaces-0.3.1/out/src/extension
+[2020-07-20 23:16:59.651] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2020-07-20 23:16:59.651] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/streetsidesoftware.code-spell-checker-1.9.0/dist/extension
+[2020-07-20 23:17:00.137] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-20 23:17:00.138] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/github/dist/extension.js
+[2020-07-20 23:17:00.261] [exthost] [info] eager extensions activated
+[2020-07-20 23:17:00.310] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2020-07-20 23:17:00.311] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/html-language-features/client/dist/node/htmlClientMain
+[2020-07-20 23:17:00.415] [exthost] [info] ExtensionService#_doActivateExtension kisstkondoros.vscode-codemetrics {"startup":false,"extensionId":{"value":"kisstkondoros.vscode-codemetrics","_lower":"kisstkondoros.vscode-codemetrics"},"activationEvent":"onLanguage:html"}
+[2020-07-20 23:17:00.415] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/kisstkondoros.vscode-codemetrics-1.24.0/dist/extension
+[2020-07-20 23:17:13.986] [exthost] [info] extension host started
+[2020-07-20 23:17:14.115] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-07-20 23:17:14.115] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-07-20 23:17:14.122] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-07-20 23:17:14.130] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-07-20 23:17:14.156] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-20 23:17:14.156] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/git/dist/main
+[2020-07-20 23:17:14.199] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-07-20 23:17:14.199] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-07-20 23:17:14.212] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-07-20 23:17:14.212] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2020-07-20 23:17:14.217] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":true,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"*"}
+[2020-07-20 23:17:14.217] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2020-07-20 23:17:14.226] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-07-20 23:17:14.226] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-07-20 23:17:14.229] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"extensionId":{"value":"christian-kohler.path-intellisense","_lower":"christian-kohler.path-intellisense"},"activationEvent":"*"}
+[2020-07-20 23:17:14.229] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/christian-kohler.path-intellisense-2.2.1/out/extension.js
+[2020-07-20 23:17:14.261] [exthost] [info] ExtensionService#_doActivateExtension donjayamanne.githistory {"startup":true,"extensionId":{"value":"donjayamanne.githistory","_lower":"donjayamanne.githistory"},"activationEvent":"*"}
+[2020-07-20 23:17:14.261] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/donjayamanne.githistory-0.6.8/dist/src/extension
+[2020-07-20 23:17:14.316] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":true,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"*"}
+[2020-07-20 23:17:14.316] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/eamodio.gitlens-10.2.2/dist/extension
+[2020-07-20 23:17:14.437] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2020-07-20 23:17:14.437] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/editorconfig.editorconfig-0.15.1/out/editorConfigMain.js
+[2020-07-20 23:17:14.477] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"extensionId":{"value":"formulahendry.auto-close-tag","_lower":"formulahendry.auto-close-tag"},"activationEvent":"*"}
+[2020-07-20 23:17:14.477] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/formulahendry.auto-close-tag-0.5.8/out/src/extension
+[2020-07-20 23:17:14.479] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.gitignore {"startup":true,"extensionId":{"value":"michelemelluso.gitignore","_lower":"michelemelluso.gitignore"},"activationEvent":"*"}
+[2020-07-20 23:17:14.479] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/michelemelluso.gitignore-1.0.1/out/src/extension
+[2020-07-20 23:17:14.481] [exthost] [info] ExtensionService#_doActivateExtension shardulm94.trailing-spaces {"startup":true,"extensionId":{"value":"shardulm94.trailing-spaces","_lower":"shardulm94.trailing-spaces"},"activationEvent":"*"}
+[2020-07-20 23:17:14.481] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/shardulm94.trailing-spaces-0.3.1/out/src/extension
+[2020-07-20 23:17:14.515] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2020-07-20 23:17:14.515] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/streetsidesoftware.code-spell-checker-1.9.0/dist/extension
+[2020-07-20 23:17:15.178] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-20 23:17:15.178] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/github/dist/extension.js
+[2020-07-20 23:17:15.572] [exthost] [info] eager extensions activated
+[2020-07-20 23:17:26.976] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2020-07-20 23:17:26.976] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-07-20 23:17:27.070] [exthost] [info] ExtensionService#_doActivateExtension chrmarti.regex {"startup":false,"extensionId":{"value":"chrmarti.regex","_lower":"chrmarti.regex"},"activationEvent":"onLanguage:javascript"}
+[2020-07-20 23:17:27.070] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/chrmarti.regex-0.2.0/out/src/extension
+[2020-07-20 23:17:27.075] [exthost] [info] ExtensionService#_doActivateExtension eg2.tslint {"startup":false,"extensionId":{"value":"eg2.tslint","_lower":"eg2.tslint"},"activationEvent":"onLanguage:javascript"}
+[2020-07-20 23:17:27.075] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/eg2.tslint-1.0.44/out/extension
+[2020-07-20 23:17:27.245] [exthost] [info] ExtensionService#_doActivateExtension kisstkondoros.vscode-codemetrics {"startup":false,"extensionId":{"value":"kisstkondoros.vscode-codemetrics","_lower":"kisstkondoros.vscode-codemetrics"},"activationEvent":"onLanguage:javascript"}
+[2020-07-20 23:17:27.245] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/kisstkondoros.vscode-codemetrics-1.24.0/dist/extension
+[2020-07-20 23:17:27.266] [exthost] [info] ExtensionService#_doActivateExtension VisualStudioExptTeam.vscodeintellicode {"startup":false,"extensionId":{"value":"VisualStudioExptTeam.vscodeintellicode","_lower":"visualstudioexptteam.vscodeintellicode"},"activationEvent":"onLanguage:javascript"}
+[2020-07-20 23:17:27.266] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/ansi/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.2.9/dist/intellicode
+[2020-07-20 23:17:28.814] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2020-07-20 23:17:28.815] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/configuration-editing/dist/configurationEditingMain
+[2020-07-20 23:17:28.836] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2020-07-20 23:17:28.836] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain
+[2020-07-20 23:18:19.134] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2020-07-20 23:18:19.134] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/37/usr/share/code/resources/app/extensions/extension-editing/dist/extension

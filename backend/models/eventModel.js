@@ -9,7 +9,7 @@ const eventSchema=new mongoose.Schema({
 let event = mongoose.model('event',eventSchema)
 
 let deleteModel=(device_id, date, duration, intensity)=>{
-    event.remove({
+    event.deleteOne({
         device_id:device_id,
         date: date,
         duration: duration,
@@ -22,20 +22,20 @@ let deleteModel=(device_id, date, duration, intensity)=>{
             }
             });
 }
-let findModel=(device_id, date, duration, intensity)=>{
-    event.findOne({
+let findModel=async (device_id, date, duration, intensity)=>{
+    event.find({
         device_id:device_id,
         date: date,
         duration: duration,
         intensity: intensity
     })
-    .exec()
-    .then((res)=>{
-        if(!res){
+    .exec().then(()=>{
+        if(res!=undefined){
             return false
+        }else{
+            return true
         }
-        return true
-    });
+    })
 }
 let findAllModel=(res)=>{
      event.find({})
@@ -44,8 +44,8 @@ let findAllModel=(res)=>{
         res.json(doc)
     })
 }
-let model= (device_id, date, duration, intensity)=>{
-    let eventRecord=new event(
+let model= async (device_id, date, duration, intensity)=>{
+    let eventRecord=await new event(
         {
             device_id:device_id,
             date: date,
@@ -53,7 +53,7 @@ let model= (device_id, date, duration, intensity)=>{
             intensity: intensity
         }
     )
-    eventRecord.save(function(err,alex){
+    await eventRecord.save(function(err,alex){
         if(err){
             console.log(err);
         }else{

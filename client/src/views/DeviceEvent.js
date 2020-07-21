@@ -31,6 +31,8 @@ import {
 
 import EventForm from "../variables/EventForm"
 import Axios from "axios"
+import socketIOClient from "socket.io-client";
+const ENDPOINT = "http://localhost:8082";
 
 
 // const Schedule = [
@@ -44,32 +46,45 @@ class Tables extends React.Component {
       Schedule: [],
       reloadFlag: true
     }
+    const socket=socketIOClient(ENDPOINT);
+    socket.on("FromAPI",flag=>{
+      if(flag){
+        this.rerenderParentCallback();
+      }
+    })
   }
-
   rerenderParentCallback = async () => {
     console.log("beforequeryCall")
     await this.ScheduleQuery().then(record => {
       let temp = []
       console.log("afterqueryCall")
       console.log(record)
-      record.forEach(event => {
-        temp.push([event.device_id, event.date, event.duration, event.intensity, event._id])
-      })
-      this.setState({
-        Schedule: temp,
-        reloadFlag: (!this.state.reloadFlag)
-
-      })
+      if(record){
+        record.forEach(event => {
+          temp.push([event.device_id, event.date, event.duration, event.intensity, event._id])
+        })
+        this.setState({
+          Schedule: temp,
+          reloadFlag: (!this.state.reloadFlag)
+        })
+      }
+      else{
+        this.setState({
+          Schedule: ["","","","",""],
+          reloadFlag: (!this.state.reloadFlag)
+        })
+      }
     console.log("whereAmI")
-
     });
-
-    // this.forceUpdate();
   }
 
-  ScheduleDelete = (device_id, date, duration, intensity) => {
-    Axios.post('/event/delete', { device_id, date, duration, intensity })
+  ScheduleDelete = async (device_id, date, duration, intensity) => {
+    const response = await Axios.post('/event/delete', { device_id, date, duration, intensity })
+    const json =await response.data;
+    const x = JSON.parse(JSON.stringify(json));
+    console.log(x);
   }
+
   ScheduleQuery = async () => {
     console.log("queryCall")
     // const response = await fetch('/event/all');
@@ -77,7 +92,7 @@ class Tables extends React.Component {
     const json = await response.data;
     const x = JSON.parse(JSON.stringify(json));
     if (x == "") {
-      return
+      return ""
     }
     // console.log(x)
     return x
@@ -129,7 +144,12 @@ class Tables extends React.Component {
                             outline
                             size="sm"
                             color="primary"
-                            onClick={() => { console.log(row[1] + " " + row[2]) }}
+                            onClick={() => {
+                              //remove button
+                              this.ScheduleDelete(row[0],row[1],row[2],row[3]).then(
+                                  ()=>this.rerenderParentCallback()
+                              )
+                            }}
                           >
                             remove</Button></td>
 

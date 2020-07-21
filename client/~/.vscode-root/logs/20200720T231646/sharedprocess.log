@@ -1,0 +1,3 @@
+[2020-07-20 23:16:52.427] [sharedprocess] [info] main {"machineId":"75b05cc452f5db2d68fa34469634656f6bd3e6033d4221195386fc3a3a8b77c0","windowId":2}
+[2020-07-20 23:16:52.730] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/ansi/DADN/client/~/.vscode-root/User/snippets'
+[2020-07-20 23:17:32.533] [sharedprocess] [info] Starting to clean up unused language packs.
