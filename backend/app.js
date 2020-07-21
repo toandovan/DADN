@@ -85,7 +85,7 @@ Subscriber.Subscribe()
 // const server = require('http').Server(app);
 // const io = require('socket.io')(server);
 socket.realTime(app,8080,'moistures')
-// socket.realTime(app,8082,'event')
+socket.realTime(app,8082,'event')
 // sendEmail.sendEmail2()
 // sendEmail.sendEmail("hihi")
 // setTimeout((()=>{sendEmail.sendEmail("haha")}),10000)
