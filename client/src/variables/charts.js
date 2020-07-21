@@ -225,6 +225,25 @@ let chartExample1 = {
     };
   },
   data3: canvas => {
+
+
+    let month_obj = {}
+    data_mois[1].forEach((x,i) => {
+      // if (CheckWeek(x)) {
+        let key = (new Date(x)).toLocaleDateString()
+        if(month_obj[key]){
+          month_obj[key] += data_mois[0][i]
+        } 
+        else{
+          month_obj[key] = data_mois[0][i]
+        }
+      // }
+    })
+    Object.keys(month_obj).forEach(key => {
+      month_obj[key] = month_obj[key]/CheckDup(data_mois[1],key)
+    })
+
+
     let ctx = canvas.getContext("2d");
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -234,20 +253,21 @@ let chartExample1 = {
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
     return {
-      labels: [
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC"
-      ],
+      // labels: [
+      //   "JAN",
+      //   "FEB",
+      //   "MAR",
+      //   "APR",
+      //   "MAY",
+      //   "JUN",
+      //   "JUL",
+      //   "AUG",
+      //   "SEP",
+      //   "OCT",
+      //   "NOV",
+      //   "DEC"
+      // ],
+      labels: Object.keys(month_obj),
       datasets: [
         {
           label: "My First dataset",
@@ -264,7 +284,8 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
+          // data: [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
+          data: Object.values(month_obj)
         }
       ]
     };

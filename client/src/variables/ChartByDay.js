@@ -184,7 +184,7 @@ class ChartByDay extends React.Component {
               <Col md="12">
                 <Card>
                   <CardHeader>
-                    <CardTitle tag="h2">Loading...</CardTitle>
+                    <CardTitle tag="h2">Choose Sensor Type</CardTitle>
                   </CardHeader>
                 </Card>
               </Col>
