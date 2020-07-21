@@ -19,6 +19,7 @@ var cb = function(err){
   }
 };
 mongoose.connect("mongodb+srv://tronganhn2:aa@cluster0-qswj1.gcp.mongodb.net/data-test1?retryWrites=true&w=majority",cb);
+// mongoose.connect("mongodb+srv://hau99:0339390851@cluster0.v8ide.mongodb.net/DADN?retryWrites=true&w=majority",cb);
 con = mongoose.connection;
 
 var dashBoardRouter=require('./routes/Dashboard')
@@ -28,6 +29,7 @@ var deviceRouter = require('./routes/deviceList');
 let sendSensorData = require('./routes/sendSensorData')
 let authServer = require('./routes/authServer')
 let eventRouter = require('./routes/event')
+let autoDevice = require('./routes/autoDevice')
 
 var app = express();
 
@@ -47,6 +49,7 @@ app.use('/Dashboard', dashBoardRouter);
 app.use('/device', deviceRouter);
 app.use('/Dashboard/sensorData', sendSensorData);
 app.use('/event', eventRouter)
+app.use('/device/autoDevice', autoDevice);
 
 app.get('/api/home', function(req, res) {
   res.send('Welcome!');
@@ -76,7 +79,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// Subscriber.Subscribe()
+Subscriber.Subscribe()
 
 
 // const server = require('http').Server(app);

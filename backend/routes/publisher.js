@@ -21,6 +21,7 @@ function Publisher(id, val0, val1){
     /////////////////////////////////////////
 
     broker = "40.112.49.62"
+    // broker = "52.186.145.109"
     // var client = mqtt.connect('mqtt://'+broker)
     var clientTest = mqtt.connect({
         host: broker

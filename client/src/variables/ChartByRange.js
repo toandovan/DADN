@@ -60,6 +60,8 @@ import {
 // function createData(time, amount) {
 //   return { time, amount };
 // }
+import socketIOClient from "socket.io-client";
+const ENDPOINT = "http://localhost:8080";
 
 class ChartByRange extends React.Component {
   constructor(props) {
@@ -68,6 +70,26 @@ class ChartByRange extends React.Component {
       bigChartData: "data1",
       loading: 'init',
     };
+    // RealTime
+    const socket=socketIOClient(ENDPOINT);
+    // socket.on("FromAPI", res => console.log(res))
+    socket.on("FromAPI",flag=>{
+      // console.log("socket io true")
+      if(flag){
+        this.request("Mois").then((res)=>{
+          this.setState({loading: 'true'})
+          ////////////////
+          // console.log("This is res")
+          // console.log(res)
+          data_mois[0] = res[0]
+          data_mois[1] = res[1]
+          this.setState({bigChartData: "data1"}); 
+          
+          this.setState({loading: 'false'});
+        })
+      }
+    })
+    ////////
   }
   setBgChartData = name => {
     this.setState({

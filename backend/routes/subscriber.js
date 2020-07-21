@@ -82,10 +82,11 @@ const mongoose = require('mongoose')
 const publish = require('./publisher')
 
 // const User=require('./models/sensorModel.js')
-function Checkdata(obj, id, value) {
-    // console.log(value)
-    if (obj[0].values[0] > 1) {
-        publish.Publisher(id, value[0], value[1])
+function Checkdata(obj, id, limitvalue) {
+    if (Number(obj[0].values[0]) < Number(limitvalue[0][0])) {
+        publish.Publisher(id, 1, Number(limitvalue[0][1]));
+    }else if(Number(obj[0].values[0]) > Number(limitvalue[1][0])){
+        publish.Publisher(id, 0, 0);
     }
 }
 
@@ -143,7 +144,8 @@ function Subscribe() {
         //message
         var obj = JSON.parse(message);
         console.log(obj)
-        // Checkdata(obj, "Speaker", [0, 0])
+        // console.log(require('./LimitValue').Arr)
+        Checkdata(obj, "Speaker", require('./LimitValue').Arr)
         mois.model(obj[0].device_id, "nat", 'on',obj[0].values);
     })
 
