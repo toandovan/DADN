@@ -46,8 +46,8 @@ class Tables extends React.Component {
       Schedule: [],
       reloadFlag: true
     }
-    const socket=socketIOClient(ENDPOINT);
-    socket.on("FromAPI",flag=>{
+    this.socket=socketIOClient(ENDPOINT);
+    this.socket.on("FromAPI",flag=>{
       if(flag){
         this.rerenderParentCallback();
       }
@@ -70,7 +70,7 @@ class Tables extends React.Component {
       }
       else{
         this.setState({
-          Schedule: ["","","","",""],
+          Schedule: [],
           reloadFlag: (!this.state.reloadFlag)
         })
       }
@@ -112,6 +112,13 @@ class Tables extends React.Component {
       }
     });
   }
+
+
+  componentWillUnmount() {
+
+    this.socket.close()
+  }
+
   render() {
     return (
       <>

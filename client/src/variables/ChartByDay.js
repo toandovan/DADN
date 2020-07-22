@@ -84,26 +84,26 @@ class ChartByDay extends React.Component {
       dateFlag: ''
     };
     // RealTime
-    const socket=socketIOClient(ENDPOINT);
-    // socket.on("FromAPI", res => console.log(res))
-    socket.on("FromAPI",flag=>{
-      // console.log("socket io true")
-      if(flag){
-        this.request("Mois").then((res)=>{
-          this.setState({loading: 'true'})
-          ////////////////
-          // console.log("This is res")
-          // console.log(res)
-          data_moisChart2[0] = res[0]
-          data_moisChart2[1] = res[1]
-          // this.setState({bigChartData: "data1"}); 
-          this.setState({
-            dateFlag: localStorage.getItem("dateSelected")
-          });
-          this.setState({loading: 'false'});
-        })
-      }
-    })
+    // const socket=socketIOClient(ENDPOINT);
+    // // socket.on("FromAPI", res => console.log(res))
+    // socket.on("FromAPI",flag=>{
+    //   // console.log("socket io true")
+    //   if(flag){
+    //     this.request("Mois").then((res)=>{
+    //       this.setState({loading: 'true'})
+    //       ////////////////
+    //       // console.log("This is res")
+    //       // console.log(res)
+    //       data_moisChart2[0] = res[0]
+    //       data_moisChart2[1] = res[1]
+    //       // this.setState({bigChartData: "data1"}); 
+    //       this.setState({
+    //         dateFlag: localStorage.getItem("dateSelected")
+    //       });
+    //       this.setState({loading: 'false'});
+    //     })
+    //   }
+    // })
     ////////
   }
 
@@ -138,6 +138,12 @@ class ChartByDay extends React.Component {
     // return date_time
   }
 
+  // componentWillUnmount() {
+  //   // fix Warning: Can't perform a React state update on an unmounted component
+  //   this.setState = (state, callback) => {
+  //     return;
+  //   };
+  // }
 
   componentDidUpdate(prevProps) {
 

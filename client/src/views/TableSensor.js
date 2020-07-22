@@ -35,8 +35,8 @@ class Tables extends React.Component {
       loading: 'init',
       sensor: []
     }
-    const socket=socketIOClient(ENDPOINT);
-    socket.on("FromAPI",flag=>{
+    this.socket=socketIOClient(ENDPOINT);
+    this.socket.on("FromAPI",flag=>{
       if(flag){
         this.request().then((res)=>{
           this.setState({loading: 'true',sensor: res.sensorData});
@@ -58,6 +58,10 @@ class Tables extends React.Component {
       this.setState({loading: 'false'});
       // console.log(res);
     })
+  }
+
+  componentWillUnmount() {
+    this.socket.close()
   }
   render() {
     if (this.state.loading === 'init') {

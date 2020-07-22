@@ -6,8 +6,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import {
-    Button
-  } from "reactstrap";
+  Button
+} from "reactstrap";
 import axios from 'axios';
 
 
@@ -46,19 +46,27 @@ const useStyles = makeStyles((theme) => ({
       margin: 0
     },
     color: '#1F8EF1'
-    }
+  }
 }));
 
 export default function LimitForm() {
 
-  let [Date,setDate] = React.useState(undefined)
-  let [Duration,setDuration] = React.useState(undefined)
-  let [Device, setDevice] = React.useState('');
-//   let [open, setOpen] = React.useState(false);
+  let [Lower, SetLower] = React.useState(undefined)
+  let [Intensity, SetIntensity] = React.useState(undefined)
+  let [Upper, SetUpper] = React.useState(undefined)
 
-let [Lower,SetLower] = React.useState(undefined)
-let [Upper,SetUpper] = React.useState(undefined)
-let [Intensity,SetIntensity] = React.useState(undefined)
+  React.useEffect(() => {
+    axios.get('/device/autoDevice/initLimit').then((res) => {
+      console.log(res.data)
+      SetLower(res.data[0][0])
+      SetIntensity(res.data[0][1])
+      SetUpper(res.data[1][0])
+    })
+  }, []);
+
+  //   let [open, setOpen] = React.useState(false);
+
+
 
 
 
@@ -66,37 +74,37 @@ let [Intensity,SetIntensity] = React.useState(undefined)
 
   const classes = useStyles();
 
-  function handleIntensityChange(e){
+  function handleIntensityChange(e) {
     SetIntensity(e.target.value);
   }
-  function handleLowerChange(e){
+  function handleLowerChange(e) {
     SetLower(e.target.value);
   }
-  function handleUpperChange(e){
+  function handleUpperChange(e) {
     SetUpper(e.target.value);
   }
 
-//   function handleDurationChange(e){
-//     setDuration(e.target.value);
-//   }
+  //   function handleDurationChange(e){
+  //     setDuration(e.target.value);
+  //   }
 
-//   function handleDeviceChange(e){
-//     setDevice(e.target.value);
-//   };
+  //   function handleDeviceChange(e){
+  //     setDevice(e.target.value);
+  //   };
 
-//   const handleClose = () => {
-//     setOpen(false);
-//   };
+  //   const handleClose = () => {
+  //     setOpen(false);
+  //   };
 
-//   const handleOpen = () => {
-//     setOpen(true);
-//   };
+  //   const handleOpen = () => {
+  //     setOpen(true);
+  //   };
 
-  function HandleApplyClick(){
+  function HandleApplyClick() {
     // console.log(Lower)
     // console.log(Intensity)
     // console.log(Upper)
-    let autoValue = [[Lower,Intensity],[Upper,"0"]]
+    let autoValue = [[Lower, Intensity], [Upper, "0"]]
     console.log("in ChangeSensorLimit")
     axios.post(`/device/autoDevice`, { autoValue })
   }
@@ -108,42 +116,42 @@ let [Intensity,SetIntensity] = React.useState(undefined)
 
   return (
     <form className={classes.container} noValidate>
-      <TextField 
+      <TextField
         id="Lower"
         label="Lower Bound"
         type="number"
         min="0"
-        placeholder="0"
+        // placeholder="0"
         className={classes.number}
         InputProps={{
-        className: classes.input,
+          className: classes.input,
         }}
         InputLabelProps={{
-            className: classes.input,
-            shrink: true,
+          className: classes.input,
+          shrink: true,
         }}
         value={Lower || ''}
-        onChange={(e)=>handleLowerChange(e)}
+        onChange={(e) => handleLowerChange(e)}
       />
-      <TextField 
+      <TextField
         id="intensity"
         label="Set Device's intensity"
         min="0" max="5000"
         type="number"
-        placeholder="250"
+        // placeholder="250"
         // defaultValue=
         className={classes.number}
         InputProps={{
-        className: classes.input,
+          className: classes.input,
         }}
         InputLabelProps={{
-            className: classes.input,
-            shrink: true,
+          className: classes.input,
+          shrink: true,
         }}
-        value={Intensity  || ''}
-        onChange={(e)=>handleIntensityChange(e)}
+        value={Intensity || ''}
+        onChange={(e) => handleIntensityChange(e)}
       />
-      <TextField 
+      <TextField
         id="Upper"
         label="Upper Bound"
         type="number"
@@ -151,22 +159,22 @@ let [Intensity,SetIntensity] = React.useState(undefined)
         placeholder="100"
         className={classes.number}
         InputProps={{
-        className: classes.input,
+          className: classes.input,
         }}
         InputLabelProps={{
-            className: classes.input,
-            shrink: true,
+          className: classes.input,
+          shrink: true,
         }}
         value={Upper || ''}
-        onChange={(e)=>handleUpperChange(e)}
+        onChange={(e) => handleUpperChange(e)}
       />
-    
-      <Button 
-        outline 
-        size="sm" 
-        color="#1F8EF1" 
+
+      <Button
+        outline
+        size="sm"
+        color="#1F8EF1"
         onClick={HandleApplyClick}
-        >
+      >
         Apply
         </Button>
     </form>

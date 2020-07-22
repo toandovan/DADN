@@ -16,6 +16,7 @@ router.post('/', (req, res)=>{
         if(event.findModel(deviceId,date,duration,intensity)){
             console.log('hello world. xxxxxxxxxxx');
             if(intensity>0){
+                console.log("run this")
                 publisher.Publisher(deviceId,1,intensity);
             }
             else{

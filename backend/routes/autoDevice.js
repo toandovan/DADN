@@ -5,14 +5,18 @@ var router = express.Router();
 // var subcriber = require('./subscriber')
 var LimitValue = require('./LimitValue')
 
-router.post('/', function(req, res, next) {
+router.post('/', function (req, res, next) {
   console.log("in post")
-  if(req.body.autoValue){
+  if (req.body.autoValue) {
     // console.log(req.body.autoValue)
     LimitValue.setArr(req.body.autoValue);
     console.log(LimitValue.Arr)
   }
-  else{console.log("none")}
-  })
+  else { console.log("none") }
+})
+
+router.get('/initLimit', function (req, res, next) {
+  res.send(LimitValue.Arr)
+})
 
 module.exports = router;

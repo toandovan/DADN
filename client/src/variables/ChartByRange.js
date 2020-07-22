@@ -60,7 +60,7 @@ import {
 // function createData(time, amount) {
 //   return { time, amount };
 // }
-import socketIOClient from "socket.io-client";
+import socketIOClient, { Socket } from "socket.io-client";
 const ENDPOINT = "http://localhost:8080";
 
 class ChartByRange extends React.Component {
@@ -71,9 +71,9 @@ class ChartByRange extends React.Component {
       loading: 'init',
     };
     // RealTime
-    const socket=socketIOClient(ENDPOINT);
+    this.socket=socketIOClient(ENDPOINT);
     // socket.on("FromAPI", res => console.log(res))
-    socket.on("FromAPI",flag=>{
+    this.socket.on("FromAPI",flag=>{
       // console.log("socket io true")
       if(flag){
         this.request("Mois").then((res)=>{
@@ -149,6 +149,15 @@ class ChartByRange extends React.Component {
   //     this.setState({ loading: 'false' })
   //   })
   // }
+  }
+
+  componentWillUnmount() {
+    // fix Warning: Can't perform a React state update on an unmounted component
+    // this.setState = (state, callback) => {
+    //   return;
+    // };
+    console.log("RangeClose")
+    this.socket.close()
   }
 
   render() {
